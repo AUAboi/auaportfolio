@@ -4,16 +4,19 @@
 		<article class="mt-8 mb-2 grid grid-cols-2">
 			<div class="bg-gray-300 px-6 py-10">
 				<div
-					class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-md"
+					class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-md "
 				>
-					<img
-						class="profile-img mx-auto drop-shadow-2xl"
-						src="../assets/myimg.jpg"
-						s
-					/>
-					<h1 class="text-purple-500 text-xl font-bold text-center p-1 m-1">
-						Ahsan Faisal
-					</h1>
+					<div>
+						<img
+							class="profile-img mx-auto drop-shadow-2xl"
+							src="../assets/myimg.jpg"
+							s
+						/>
+						<h1 class="text-purple-500 text-xl font-bold text-center p-1 m-1">
+							Ahsan Faisal
+						</h1>
+					</div>
+
 					<ul class="flex justify-around">
 						<li>Developer</li>
 						<li>Designer</li>

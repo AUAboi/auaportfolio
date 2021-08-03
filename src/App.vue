@@ -5,6 +5,7 @@
 			<Home />
 		</main>
 	</div>
+
 	<About />
 	<MySkills />
 </template>
@@ -31,7 +32,6 @@ export default {
 #app {
 	@apply my-6;
 }
-
 .section-heading {
 	@apply text-purple-500;
 	@apply text-9xl;
