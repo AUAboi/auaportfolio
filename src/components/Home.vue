@@ -1,5 +1,5 @@
 <template>
-	<section class="my-12">
+	<section class="relative my-12">
 		<div class="flex justify-between">
 			<div class="px-3 mx-4 my-auto">
 				<h1 class="text-xl text-purple-400 leading-3 tracking-widest">
@@ -27,16 +27,6 @@
 				<img class="w-full" src="../assets/person.svg" alt="" />
 			</div>
 		</div>
-
-		<!-- <div>
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-				<path
-					fill="#0099ff"
-					fill-opacity="1"
-					d="M0,64L1440,224L1440,0L0,0Z"
-				></path>
-			</svg>
-		</div> -->
 	</section>
 </template>
 
@@ -49,3 +39,10 @@ export default {
 	}
 };
 </script>
+
+<style scoped>
+.blob {
+	position: absolute;
+	width: 1rem;
+}
+</style>
