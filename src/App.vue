@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<div class="mx-32">
+		<div class="mx-2 lg:mx-32">
 			<Header />
 			<main class="bg-image">
 				<Home />
@@ -37,12 +37,29 @@ export default {
 </script>
 
 <style>
+::-moz-selection {
+	@apply text-white;
+	@apply bg-purple-400;
+}
+
+::selection {
+	@apply text-white;
+	@apply bg-purple-400;
+}
+
 #app {
 	@apply mt-6;
+	font-family: "Nunito Sans", sans-serif;
 }
 .section-heading {
 	@apply text-purple-500;
 	@apply text-9xl;
 	@apply opacity-60;
+}
+
+@media screen and (max-width: 640px) {
+	.section-heading {
+		@apply text-7xl;
+	}
 }
 </style>

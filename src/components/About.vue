@@ -1,10 +1,10 @@
 <template>
 	<section class="my-10">
 		<h1 class="section-heading">About Me</h1>
-		<article class="mt-8 mb-2 grid grid-cols-2">
-			<div class="bg-gray-300 px-6 py-10">
+		<article class="mt-8 mb-2 grid grid-rows-1 md:grid-cols-2">
+			<div class="bg-gray-300 px-1 py-6 sm:px-6 sm:py-10">
 				<div
-					class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-md "
+					class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-xl "
 				>
 					<div>
 						<img
@@ -17,7 +17,7 @@
 						</h1>
 					</div>
 
-					<ul class="flex justify-around">
+					<ul class="flex justify-around text-sm sm:text-base">
 						<li>Developer</li>
 						<li>Designer</li>
 						<li>Gamer</li>
@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .profile-img {
-	width: 40%;
+	width: 6rem;
 	border-radius: 100%;
 
 	box-shadow: -1px 3px 17px 0px rgba(0, 0, 0, 0.75);

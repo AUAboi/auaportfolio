@@ -6,7 +6,7 @@
 			<a
 				class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 text-xl"
 			>
-				<AppProfile class="w-1/12 mx-2 px-1" />
+				<AppProfile class="w-12 mx-2 px-1" />
 				<h1>AhsanAUA</h1>
 			</a>
 			<nav
