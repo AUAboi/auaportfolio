@@ -7,11 +7,9 @@
 		leave-from-class="opacity-100"
 		leave-to-class="opacity-0"
 	>
-		<div
-			ref="modal-backdrop"
-			class="fixed z-10 inset-0 overflow-y-auto bg-black bg-opacity-50"
-		>
+		<div class="fixed z-10 inset-0 overflow-y-auto bg-black bg-opacity-50">
 			<div
+				@click.self="$emit('close')"
 				class="flex items-start justify-center min-h-screen pt-24 text-center"
 			>
 				<transition
@@ -23,13 +21,37 @@
 					leave-to-class="opacity-0 translate-y-10 translate-y-0 scale-95"
 				>
 					<div
-						class="bg-white rounded-lg text-left overflow-hidden shadow-xl p-8 w-1/2"
-						role="dialog"
-						ref="modal"
-						aria-modal="true"
-						aria-labelledby="modal-headline"
+						class="bg-white rounded-lg text-left overflow-hidden shadow-xl p-8 w-3/4 md:w-1/2 relative"
 					>
-						{{ project.title }}
+						<div
+							@click="$emit('close')"
+							class="absolute right-4 top-4 text-4xl z-20 text-red-500 cursor-pointer"
+						>
+							<i class="fas fa-times-circle"></i>
+						</div>
+						<h1 class="text-xl font-semibold">{{ project.title }}</h1>
+						<div class="w-full">
+							<img
+								src="../../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg"
+								alt=""
+							/>
+						</div>
+						<div>
+							<h2 class="font-semibold tracking-wide">About</h2>
+							<p class="text-gray-800">
+								{{ project.details }}
+							</p>
+						</div>
+						<div>
+							<h2 class="font-semibold tracking-wide">
+								Notable Technologies used
+							</h2>
+							<ul class="text-gray-400 flex justify-around">
+								<li v-for="(skill, index) in project.skills" :key="index">
+									{{ skill }}
+								</li>
+							</ul>
+						</div>
 					</div>
 				</transition>
 			</div>
@@ -48,6 +70,3 @@ export default {
 	}
 };
 </script>
-
-<style>
-</style>

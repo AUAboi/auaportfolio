@@ -1,9 +1,9 @@
 <template>
-	<section class="">
+	<section>
 		<AppProjectModal
 			v-show="show"
-			@click="show = false"
 			:project="selectedProject"
+			@close="closeModal"
 		/>
 		<h1 class="section-heading">My Portfolio</h1>
 		<div class="grid md:grid-cols-2 lg:grid-cols-3">
@@ -43,6 +43,13 @@ export default {
 					details:
 						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
 					skills: ["jquery", "php", "mysql"]
+				},
+				{
+					title: "Quiz Site",
+					intro: "Demo for quiz app",
+					details:
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
+					skills: ["laravel", "mysql", "vue"]
 				}
 			]
 		};
@@ -51,8 +58,19 @@ export default {
 		showModal(project) {
 			this.selectedProject = project;
 			this.show = true;
+			this.$emit("show-modal");
+		},
+		closeModal() {
+			this.show = false;
 		}
 	}
+	// watch: {
+	// 	show() {
+	// 		//Improve this later
+	// 		//Hide overflow when modal shown
+	// 		// document.querySelector("body").classList.toggle("overflow-y-hidden");
+	// 	}
+	// }
 };
 </script>
 

@@ -1,11 +1,9 @@
 <template>
 	<div>
-		<div class="mx-2 lg:mx-32">
-			<Header />
-			<main class="bg-image">
-				<Home />
-			</main>
-		</div>
+		<Header />
+		<main class="bg-image">
+			<Home />
+		</main>
 	</div>
 
 	<About />
