@@ -1,14 +1,18 @@
 <template>
-	<div>
-		<Header />
-		<main class="bg-image">
-			<Home />
-		</main>
+	<div class="container">
+		<div>
+			<Header />
+			<main class="bg-image">
+				<Home />
+			</main>
+		</div>
 	</div>
 
 	<About />
-	<MySkills />
-	<Portfolio />
+	<div class="container">
+		<MySkills />
+		<Portfolio />
+	</div>
 	<Footer />
 </template>
 

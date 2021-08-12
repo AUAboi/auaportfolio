@@ -10,7 +10,7 @@
 		<div class="fixed z-10 inset-0 overflow-y-auto bg-black bg-opacity-50">
 			<div
 				@click.self="$emit('close')"
-				class="flex items-start justify-center min-h-screen pt-24 text-center"
+				class="flex items-start justify-center min-h-screen pt-10 text-center"
 			>
 				<transition
 					enter-active-class="transition ease-out duration-300 transform "

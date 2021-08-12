@@ -2,18 +2,27 @@
 	<div
 		@click="show = !show"
 		class="menu-btn absolute right-2 top-3 z-50 cursor-pointer transition-all ease-in-out duration-500"
-		:class="show ? 'close transform rotate-180' : ' '"
+		:class="show ? 'transform rotate-180' : ' '"
 	>
 		<div
-			class="btn-line"
-			:class="show ? 'transform rotate-45 translate-x-0.5 translate-y-2.5' : ''"
+			class="btn-line transition-colors ease-out"
+			:class="
+				show
+					? 'transform rotate-45 translate-x-0.5 translate-y-2.5 bg-white'
+					: 'bg-purple-500'
+			"
 		></div>
-		<div :class="show ? 'opacity-0' : ''" class="btn-line"></div>
+		<div
+			:class="show ? 'opacity-0 bg-white' : 'bg-purple-500'"
+			class="btn-line transition-colors ease-out"
+		></div>
 		<div
 			:class="
-				show ? 'transform -rotate-45 translate-x-0.5 -translate-y-1.5' : ''
+				show
+					? 'transform -rotate-45 translate-x-0.5 -translate-y-1.5 bg-white'
+					: 'bg-purple-500'
 			"
-			class="btn-line"
+			class="btn-line transition-colors ease-out"
 		></div>
 	</div>
 	<nav
@@ -53,6 +62,11 @@ export default {
 		return {
 			show: false
 		};
+	},
+	watch: {
+		show() {
+			document.querySelector("body").classList.toggle("overflow-hidden");
+		}
 	}
 };
 </script>
@@ -61,7 +75,7 @@ export default {
 	background-image: url("../../assets/myimg.jpg");
 }
 .btn-line {
-	@apply w-6 h-1 m-1 bg-purple-500;
+	@apply w-6 h-1 m-1;
 }
 
 .nav-bar .nav-branding,
@@ -122,7 +136,7 @@ export default {
 }
 
 .nav-link {
-	@apply relative text-2xl font-light uppercase text-white inline-block p-1 hover:text-purple-600;
+	@apply relative text-2xl font-light uppercase text-white inline-block my-6 hover:text-purple-600;
 }
 
 .nav-branding {

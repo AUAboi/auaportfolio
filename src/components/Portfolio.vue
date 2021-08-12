@@ -63,14 +63,14 @@ export default {
 		closeModal() {
 			this.show = false;
 		}
+	},
+	watch: {
+		show() {
+			//Improve this later
+			//Hide overflow when modal shown
+			document.querySelector("body").classList.toggle("overflow-y-hidden");
+		}
 	}
-	// watch: {
-	// 	show() {
-	// 		//Improve this later
-	// 		//Hide overflow when modal shown
-	// 		// document.querySelector("body").classList.toggle("overflow-y-hidden");
-	// 	}
-	// }
 };
 </script>
 
