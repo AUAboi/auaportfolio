@@ -81,10 +81,17 @@ export default {
 			skills: [
 				{
 					type: "frontend",
-					name: "JavaScript",
-					icon: "fab fa-js-square",
-					color: "text-yellow-400"
+					name: "HTML5",
+					icon: "fab fa-html5",
+					color: "text-red-500"
 				},
+				{
+					type: "frontend",
+					name: "CSS3",
+					icon: "fab fa-css3",
+					color: "text-blue-400"
+				},
+
 				{
 					type: "frontend",
 					name: "Bootstrap",
@@ -99,21 +106,27 @@ export default {
 				},
 				{
 					type: "frontend",
-					name: "CSS3",
-					icon: "fab fa-css3",
-					color: "text-blue-400"
+					name: "JavaScript",
+					icon: "fab fa-js-square",
+					color: "text-yellow-400"
 				},
 				{
 					type: "frontend",
-					name: "HTML5",
-					icon: "fab fa-html5",
-					color: "text-red-500"
+					name: "VueJS",
+					icon: "fab fa-vuejs",
+					color: "text-green-600"
 				},
 				{
 					type: "backend",
 					name: "PHP",
 					icon: "fab fa-php",
 					color: "text-purple-900"
+				},
+				{
+					type: "backend",
+					name: "Laravel",
+					icon: "fab fa-laravel",
+					color: "text-red-500"
 				},
 				{
 					type: "backend",

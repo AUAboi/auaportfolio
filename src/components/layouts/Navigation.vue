@@ -1,7 +1,7 @@
 <template>
 	<div
 		@click="show = !show"
-		class="menu-btn absolute right-2 top-3 z-50 cursor-pointer transition-all ease-in-out duration-500"
+		class="menu-btn absolute right-4 top-8 md:right-10 md:top-6 z-50 cursor-pointer transition-all ease-in-out duration-500"
 		:class="show ? 'transform rotate-180' : ' '"
 	>
 		<div
@@ -40,16 +40,18 @@
 		</div>
 		<ul class="menu-nav bg-black" id="menuNav" :class="show ? 'show' : ''">
 			<li class="nav-item current" :class="show ? 'show' : ''">
-				<a href="/dist/index.html" class="nav-link">Home</a>
+				<a @click="show = false" href="#home" class="nav-link">Home</a>
 			</li>
 			<li class="nav-item" :class="show ? 'show' : ''">
-				<a href="/dist/work/work.html" class="nav-link">Work</a>
+				<a @click="show = false" href="#about" class="nav-link">About</a>
 			</li>
 			<li class="nav-item" :class="show ? 'show' : ''">
-				<a href="/dist/contact/contact.html" class="nav-link">Contact</a>
+				<a @click="show = false" href="#skills" class="nav-link">Skills</a>
 			</li>
 			<li class="nav-item" :class="show ? 'show' : ''">
-				<a href="about.html" class="nav-link">About</a>
+				<a @click="show = false" href="#portfolio" class="nav-link"
+					>Portfolio</a
+				>
 			</li>
 		</ul>
 	</nav>

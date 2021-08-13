@@ -1,5 +1,5 @@
 <template>
-	<section>
+	<section class="relative">
 		<AppProjectModal
 			v-show="show"
 			:project="selectedProject"

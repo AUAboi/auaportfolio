@@ -1,10 +1,10 @@
 <template>
 	<section class="my-10">
 		<h1 class="section-heading">About Me</h1>
-		<article class="mt-8 mb-2 grid grid-rows-1 md:grid-cols-2">
+		<article class="mt-8 mb-2 grid grid-rows-1 md:grid-cols-2 my-4">
 			<div class="bg-gray-300 px-1 py-6 sm:px-6 sm:py-10">
 				<div
-					class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-xl "
+					class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-xl"
 				>
 					<div>
 						<img

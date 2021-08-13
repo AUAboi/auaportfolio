@@ -1,19 +1,13 @@
 <template>
-	<div class="container">
-		<div>
-			<Header />
-			<main class="bg-image">
-				<Home />
-			</main>
-		</div>
-	</div>
-
-	<About />
-	<div class="container">
-		<MySkills />
-		<Portfolio />
-	</div>
-	<Footer />
+	<Header />
+	<main>
+		<Home class="md:mx-16" id="home" />
+		<About id="about" />
+		<MySkills id="skills" />
+		<Portfolio id="portfolio" />
+		<Contact id="contact" />
+		<Footer />
+	</main>
 </template>
 
 <script>
@@ -24,6 +18,7 @@ import Home from "@/components/Home";
 import About from "@/components/About";
 import MySkills from "@/components/MySkills";
 import Portfolio from "@/components/Portfolio";
+import Contact from "@/components/Contact";
 
 export default {
 	name: "App",
@@ -33,6 +28,7 @@ export default {
 		About,
 		MySkills,
 		Portfolio,
+		Contact,
 		Footer
 	}
 };
@@ -40,23 +36,28 @@ export default {
 
 <style>
 ::-moz-selection {
-	@apply text-white;
-	@apply bg-purple-400;
+	@apply text-white bg-purple-400;
 }
 
 ::selection {
-	@apply text-white;
-	@apply bg-purple-400;
+	@apply text-white bg-purple-400;
 }
 
 #app {
 	@apply mt-6;
 	font-family: "Nunito Sans", sans-serif;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 .section-heading {
-	@apply text-purple-500;
-	@apply text-9xl;
-	@apply opacity-60;
+	@apply text-purple-500 text-9xl opacity-60 mx-3;
+}
+
+.blob {
+	z-index: -1;
 }
 
 @media screen and (max-width: 640px) {
