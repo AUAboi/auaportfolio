@@ -1,21 +1,20 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
+const cors = require("cors");
+const dotenv = require("dotenv");
 
+dotenv.config();
+
+//middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 //routes
 const mail = require("./routes/mail");
 
-const dotenv = require("dotenv");
-dotenv.config();
-
-app.use(express.json());
-
-app.use("/send-mail", mail);
-
-app.get("/test-node", (req, res) => {
-  res.send(res.body);
-});
+app.use("/api/send-mail", mail);
 
 app.listen(port, () => {
-  console.log(`nodemailerProject is listening at http://localhost:${port}`);
+  console.log(`Server is listening at http://localhost:${port}`);
 });
