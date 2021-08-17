@@ -47,7 +47,8 @@
 			</div>
 			<form
 				name="contact"
-				netlify
+				data-netlify="true"
+				data-netlify-honeypot="bot-field"
 				class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
 			>
 				<h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
@@ -57,6 +58,8 @@
 					Post-ironic portland shabby chic echo park, banjo fashion axe
 				</p>
 				<div class="relative mb-4">
+					<input type="hidden" name="form-name" value="contact" />
+
 					<label for="name" class="leading-7 text-sm text-gray-600">Name</label>
 					<input
 						type="text"
