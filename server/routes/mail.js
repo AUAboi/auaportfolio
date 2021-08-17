@@ -7,8 +7,8 @@ const transporter = nodemailer.createTransport({
   port: 465,
   host: "smtp.gmail.com",
   auth: {
-    user: process.env.VUE_APP_GMAIL,
-    pass: process.env.VUE_APP_PASSWORD,
+    user: "auawgamers@gmail.com",
+    pass: "WhosMe1412",
   },
   secure: true,
 });
@@ -18,8 +18,8 @@ router.post("/", (req, res) => {
 
   let text = `Name: ${name} \nEmail: ${email} \nMessage: ${message}`;
   const mailOptions = {
-    from: process.env.VUE_APP_GMAIL,
-    to: process.env.VUE_APP_PERSONAL_EMAIL,
+    from: "auawgamers@gmail.com",
+    to: "auawdigital@gmail.com",
     subject: "Mail from portfolio site!",
     text: text,
   };
