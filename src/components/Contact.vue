@@ -78,6 +78,7 @@
 					<div v-show="!emailValidation" class="text-red-500">
 						<p>Email incorrect!</p>
 					</div>
+					``
 				</div>
 				<div class="relative mb-4">
 					<label for="message" class="leading-7 text-sm text-gray-600"
@@ -94,7 +95,7 @@
 					<p>{{ formError }}</p>
 				</div>
 				<div class="text-green-500" v-if="submit">
-					<p>Email sent successfully!</p>
+					<p>{{ submit }}!</p>
 				</div>
 				<button
 					@click.prevent="sendContactFormData"
@@ -122,25 +123,30 @@ export default {
 				email: "",
 				message: ""
 			},
-			submit: false,
+			submit: "",
 			formError: ""
 		};
 	},
 	methods: {
 		async sendContactFormData() {
-			if (!this.validateForm() || !this.emailValidation) {
+			if (!this.validateFormFields() || !this.emailValidation) {
 				return;
 			}
 			let response = await axios.post("api/send-mail", this.contactForm);
 			if (response.status === 200) {
-				this.submit = true;
+				this.submit = response.data.message;
 				this.formError = "";
+				this.contactForm = {
+					name: "",
+					email: "",
+					message: ""
+				};
 			} else {
 				this.formError = "Some error occured! Try again in a bit";
 			}
 		},
 
-		validateForm() {
+		validateFormFields() {
 			if (
 				this.contactForm.name &&
 				this.contactForm.email &&

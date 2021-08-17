@@ -13,23 +13,23 @@ const transporter = nodemailer.createTransport({
   secure: true,
 });
 
-router.post("/send-mail", function(req, res) {
-  const { to, subject, text } = req.body;
+router.post("/", (req, res) => {
+  const { name, email, message } = req.body;
+
+  let text = `Name: ${name} \nEmail: ${email} \nMessage: ${message}`;
   const mailOptions = {
     from: process.env.VUE_APP_GMAIL,
-    to: to,
-    subject: subject,
+    to: process.env.VUE_APP_PERSONAL_EMAIL,
+    subject: "Mail from portfolio site!",
     text: text,
-    html:
-      "<b>Hey there! </b> <br> This is our first message sent with Nodemailer<br/>",
   };
 
-  transporter.sendMail(mailOptions, function(err, info) {
+  transporter.sendMail(mailOptions, (err) => {
     if (err) {
-      console.log(err);
+      res.send({ message: `Error occured: ${err}` });
     }
 
-    res.status(200).send({ message: "sent successfully" });
+    res.status(200).send({ message: "Sent successfully" });
   });
 });
 

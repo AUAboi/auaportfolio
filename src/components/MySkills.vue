@@ -130,9 +130,21 @@ export default {
 				},
 				{
 					type: "backend",
-					name: "mysql",
+					name: "MySQL",
 					icon: "fas fa-database",
 					color: "text-yellow-600"
+				},
+				{
+					type: "backend",
+					name: "ExpressJS",
+					color: "",
+					icon: "fab fa-node-js"
+				},
+				{
+					type: "backend",
+					name: "NodeJS",
+					color: "text-green-800",
+					icon: "fab fa-node"
 				}
 			]
 		};
