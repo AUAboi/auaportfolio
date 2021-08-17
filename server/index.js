@@ -14,7 +14,9 @@ app.use(cors());
 const mail = require("./routes/mail");
 
 app.use("/api/send-mail", mail);
-
+app.get("/", (req, res) => {
+  res.send("Test index");
+});
 app.listen(port, () => {
   console.log(`Server is listening at http://localhost:${port}`);
 });
