@@ -4,7 +4,7 @@ import axios from "axios";
 
 import "./styles/app.css";
 
-axios.defaults.baseURL = "//localhost:5000/";
+axios.defaults.baseURL = "https://auaportfolio.herokuapp.com/";
 
 const app = createApp(App);
 
