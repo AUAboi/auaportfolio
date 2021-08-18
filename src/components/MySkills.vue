@@ -1,5 +1,15 @@
 <template>
 	<section class="relative">
+		<AppModal width="w-10/12" v-show="show" @close="closeModal">
+			<component
+				v-if="modalComponent === 'app-portfolio-modal'"
+				@render="modalProject"
+				:projects="sortedProjects"
+				:is="modalComponent"
+			></component>
+			<component v-else :is="modalComponent" :project="selectedProject">
+			</component>
+		</AppModal>
 		<h1 class="section-heading">My Skills</h1>
 		<article class="my-8">
 			<div class="blob absolute opacity-20 top-10 right-0">
@@ -61,7 +71,12 @@
 				</div>
 
 				<div class="grid grid-cols-3 sm:grid-cols-4 text-center">
-					<div class="m-2" v-for="(skill, index) in currentArr" :key="index">
+					<div
+						class="m-2"
+						v-for="(skill, index) in currentArr"
+						:key="index"
+						@click="showProjectsModal(skill.name)"
+					>
 						<i class="text-6xl" :class="[skill.icon, skill.color]"></i>
 						<p>{{ skill.name }}</p>
 					</div>
@@ -72,10 +87,53 @@
 </template>
 
 <script>
+import AppModal from "@/components/utils/AppModal";
+import AppProjectModal from "@/components/utils/AppProjectModal";
+
+import AppPortfolioModal from "@/components/utils/AppPortfolioModal";
+
 export default {
 	name: "MySkills",
+	components: {
+		AppModal,
+		AppPortfolioModal,
+		AppProjectModal
+	},
 	data() {
 		return {
+			modalComponent: "app-portfolio-modal",
+			show: false,
+			sortedProjects: [],
+			selectedProject: {
+				title: "",
+				intro: "",
+				details: "",
+				skills: []
+			},
+			projects: [
+				{
+					title: "Cafe App",
+					intro: "A small cafe website I built for a client",
+					details:
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
+					skills: ["jquery", "php", "mysql"]
+				},
+				{
+					title: "Quiz Site",
+					intro: "Demo for quiz app",
+					details:
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
+					skills: ["laravel", "mysql", "vue"]
+				},
+				{
+					title: "Quiz Site",
+					intro: "Demo for quiz app",
+					details:
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
+					skills: ["laravel", "mysql", "vue"]
+				}
+			],
+			currentSkill: "",
 			toggleTypes: ["all", "frontend", "backend"],
 			currentToggleType: "all",
 			skills: [
@@ -152,6 +210,25 @@ export default {
 	methods: {
 		navToggle(selection) {
 			this.currentToggleType = selection;
+		},
+
+		modalProject(project) {
+			this.selectedProject = project;
+			this.modalComponent = "app-project-modal";
+		},
+
+		showProjectsModal(skill) {
+			this.currentSkill = skill;
+			this.sortedProjects = this.projects.filter(project => {
+				return project.skills.includes(skill.toLowerCase());
+			});
+			this.show = true;
+		},
+
+		closeModal() {
+			this.show = false;
+			this.selectedProject = {};
+			this.modalComponent = "app-portfolio-modal";
 		}
 	},
 	computed: {
@@ -163,6 +240,15 @@ export default {
 				return skill.type === this.currentToggleType;
 			});
 			return arr;
+		}
+	},
+	watch: {
+		show() {
+			if (this.show) {
+				document.querySelector("body").classList.add("overflow-y-hidden");
+			} else {
+				document.querySelector("body").classList.remove("overflow-y-hidden");
+			}
 		}
 	}
 };

@@ -1,17 +1,15 @@
 <template>
 	<section class="relative">
-		<AppProjectModal
-			v-show="show"
-			:project="selectedProject"
-			@close="closeModal"
-		/>
+		<AppModal width="w-2/3 md:w-1/2" v-show="show" @close="closeModal">
+			<component :project="selectedProject" :is="modalComponent"></component>
+		</AppModal>
 		<h1 class="section-heading">My Portfolio</h1>
 		<div class="grid md:grid-cols-2 lg:grid-cols-3">
 			<AppProject
+				@show-modal="showModal(project)"
 				v-for="(project, index) in projects"
 				:key="index"
 				:project="project"
-				@click="showModal(project)"
 			/>
 		</div>
 	</section>
@@ -19,16 +17,19 @@
 
 <script>
 import AppProject from "@/components/utils/AppProject";
+import AppModal from "@/components/utils/AppModal";
 import AppProjectModal from "@/components/utils/AppProjectModal";
 
 export default {
 	name: "Portfolio",
 	components: {
 		AppProject,
+		AppModal,
 		AppProjectModal
 	},
 	data() {
 		return {
+			modalComponent: "app-project-modal",
 			show: false,
 			selectedProject: {
 				title: "",
@@ -58,7 +59,6 @@ export default {
 		showModal(project) {
 			this.selectedProject = project;
 			this.show = true;
-			this.$emit("show-modal");
 		},
 		closeModal() {
 			this.show = false;

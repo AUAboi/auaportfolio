@@ -3,7 +3,7 @@
 	<main>
 		<Home class="md:mx-16" id="home" />
 		<About id="about" />
-		<MySkills id="skills" />
+		<MySkills @show-modal="true" id="skills" />
 		<Portfolio id="portfolio" />
 		<Contact id="contact" />
 		<Footer />
@@ -53,16 +53,10 @@ html {
 }
 
 .section-heading {
-	@apply text-purple-500 text-9xl opacity-60 mx-3;
+	@apply text-purple-500 text-6xl md:text-9xl opacity-50 mx-3;
 }
 
 .blob {
 	z-index: -1;
-}
-
-@media screen and (max-width: 640px) {
-	.section-heading {
-		@apply text-7xl;
-	}
 }
 </style>

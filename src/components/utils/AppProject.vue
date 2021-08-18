@@ -1,5 +1,8 @@
 <template>
-	<article class="mx-10 my-8 shadow-md hover:shadow-xl cursor-pointer max-w-sm">
+	<article
+		@click="$emit('show-modal', project)"
+		class="mx-10 my-8 shadow-md hover:shadow-xl cursor-pointer max-w-sm"
+	>
 		<img src="../../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg" alt="" />
 		<div class="px-2 py-1">
 			<div>
