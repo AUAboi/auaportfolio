@@ -14,8 +14,10 @@ const transporter = nodemailer.createTransport({
 });
 
 router.post("/", (req, res) => {
-  const { name, email, message } = req.body;
-
+  const { name, email, message, webtext } = req.body;
+  if (webtext) {
+    return;
+  }
   let text = `Name: ${name} \nEmail: ${email} \nMessage: ${message}`;
   const mailOptions = {
     from: process.env.VUE_APP_GMAIL,
