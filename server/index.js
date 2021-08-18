@@ -19,7 +19,9 @@ app.use(cors(corsOptions));
 const mail = require("./routes/mail");
 
 app.use("/api/send-mail", mail);
-
+app.get("/", (req, res) => {
+  res.send(`Welcome to ${process.env.VUE_APP_URL}`);
+});
 app.listen(port, () => {
   console.log(`Server is listening at ${port}`);
 });
