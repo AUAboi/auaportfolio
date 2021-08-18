@@ -46,7 +46,6 @@
 				</div>
 			</div>
 			<form
-				name="contact"
 				@submit.prevent="sendContactFormData"
 				class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
 			>
@@ -56,21 +55,22 @@
 				<p class="leading-relaxed mb-5 text-gray-600">
 					Post-ironic portland shabby chic echo park, banjo fashion axe
 				</p>
-				<div class="relative mb-4">
+				<div class="">
+					<label class="sr-only">Don’t fill this out if you're human: </label>
 					<input
-						class="hidden"
-						name="website"
-						type="text"
-						value=""
-						v-modal="contactForm.webtext"
+						v-model="contactForm.bot"
+						name="bot-field"
+						placeholder="This field is only for the robots."
+						class="form-input block w-full py-3 px-4 placeholder-gray-500 transition ease-in-out duration-150"
 					/>
-
+				</div>
+				<div class="relative mb-4">
 					<label for="name" class="leading-7 text-sm text-gray-600">Name</label>
 					<input
 						type="text"
 						id="name"
 						name="name"
-						v-modal="contactForm.name"
+						v-model="contactForm.name"
 						class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 					/>
 				</div>
@@ -82,7 +82,7 @@
 						type="email"
 						id="email"
 						name="email"
-						v-modal="contactForm.email"
+						v-model="contactForm.email"
 						class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
 					/>
 					<div v-show="!emailValidation" class="text-red-500">
@@ -96,7 +96,7 @@
 					<textarea
 						id="message"
 						name="message"
-						v-modal="contactForm.message"
+						v-model="contactForm.message"
 						class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
 					></textarea>
 				</div>
@@ -131,8 +131,9 @@ export default {
 				name: "",
 				email: "",
 				message: "",
-				webtext: ""
+				bot: ""
 			},
+
 			submit: "",
 			formError: ""
 		};
@@ -149,7 +150,8 @@ export default {
 				this.contactForm = {
 					name: "",
 					email: "",
-					message: ""
+					message: "",
+					bot: ""
 				};
 			} else {
 				this.formError = "Some error occured! Try again in a bit";
@@ -160,8 +162,8 @@ export default {
 			if (
 				this.contactForm.name &&
 				this.contactForm.email &&
-				this.contactForm.message &&
-				!this.contactForm.webtext
+				this.contactForm.message && 
+				!this.contactForm.bot
 			) {
 				return true;
 			}

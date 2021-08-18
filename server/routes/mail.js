@@ -14,8 +14,8 @@ const transporter = nodemailer.createTransport({
 });
 
 router.post("/", (req, res) => {
-  const { name, email, message, webtext } = req.body;
-  if (webtext) {
+  const { name, email, message, bot } = req.body;
+  if (bot) {
     return;
   }
   let text = `Name: ${name} \nEmail: ${email} \nMessage: ${message}`;
