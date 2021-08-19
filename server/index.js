@@ -7,7 +7,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const corsOptions = {
-  origin: "https://dreamy-bell-301b38.netlify.app/",
+  origin: "https://dreamy-bell-301b38.netlify.app",
 };
 //middleware
 app.use(express.json());
