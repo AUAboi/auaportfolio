@@ -6,18 +6,17 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+const corsOptions = {
+  origin: "https://dreamy-bell-301b38.netlify.app/",
+};
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    origin: "https://dreamy-bell-301b38.netlify.app/",
-  })
-);
+
 //routes
 const mail = require("./routes/mail");
 
-app.use("/api/send-mail", mail);
+app.use("/api/send-mail", cors(corsOptions), mail);
 app.get("/", (req, res) => {
   res.send(`Welcome to ${process.env.VUE_APP_URL}`);
 });
