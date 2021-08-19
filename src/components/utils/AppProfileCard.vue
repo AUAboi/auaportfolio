@@ -1,5 +1,5 @@
 <template>
-	<div class="bg-gray-300 px-1 py-6 sm:px-6 sm:py-10">
+	<div class=" relative px-1 py-6 sm:px-6 sm:py-10">
 		<div class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-xl">
 			<div>
 				<img

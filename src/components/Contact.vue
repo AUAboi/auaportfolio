@@ -3,21 +3,9 @@
 		<h1 class="section-heading">Contact Me</h1>
 		<div class="container px-5 py-20 mx-auto flex sm:flex-nowrap flex-wrap">
 			<div
-				class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
+				class="bg-pattern lg:w-2/3 md:w-1/2 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
 			>
-				<iframe
-					width="100%"
-					height="100%"
-					class="absolute inset-0"
-					frameborder="0"
-					title="map"
-					marginheight="0"
-					marginwidth="0"
-					scrolling="no"
-					src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-					style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
-				></iframe>
-				<div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+				<div class="bg-white relative flex flex-wrap py-6 rounded shadow-2xl">
 					<div class="lg:w-1/2 px-6">
 						<h2
 							class="title-font font-semibold text-gray-900 tracking-widest text-xs"
@@ -60,3 +48,10 @@ export default {
 	}
 };
 </script>
+
+<style scoped>
+.bg-pattern {
+	background-image: url("../assets/1629393520688.png");
+	background-size: contain;
+}
+</style>
