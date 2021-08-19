@@ -9,7 +9,7 @@
 		<p class="leading-relaxed mb-5 text-gray-600">
 			Post-ironic portland shabby chic echo park, banjo fashion axe
 		</p>
-		<div class="">
+		<div class="hidden">
 			<label class="sr-only">Don’t fill this out if you're human: </label>
 			<input
 				v-model="contactForm.bot"
