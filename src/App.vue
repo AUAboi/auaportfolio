@@ -44,7 +44,7 @@ export default {
 }
 
 #app {
-	@apply mt-6;
+	@apply mt-6 overflow-x-hidden;
 	font-family: "Nunito Sans", sans-serif;
 }
 

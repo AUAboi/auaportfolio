@@ -43,14 +43,18 @@
 					accusamus?
 				</p>
 				<div class="my-2">
-					<AppButton
-						class="bg-purple-500 text-white mr-3"
-						text="See Projects"
-					/>
-					<AppButton
-						class="text-purple-500 border border-purple-400 hover:bg-purple-500 hover:text-white transition-colors"
-						text="About me"
-					/>
+					<a href="#portfolio">
+						<button class="bg-purple-500 text-white mr-3">
+							See Projects
+						</button>
+					</a>
+					<a href="#about">
+						<button
+							class="text-purple-500 border border-purple-400 hover:bg-purple-500 hover:text-white transition-colors"
+						>
+							About me
+						</button>
+					</a>
 				</div>
 			</div>
 			<div class="w-96 hidden md:block">
@@ -61,12 +65,8 @@
 </template>
 
 <script>
-import AppButton from "@/components/utils/AppButton";
 export default {
-	name: "Home",
-	components: {
-		AppButton
-	}
+	name: "Home"
 };
 </script>
 
@@ -76,5 +76,9 @@ export default {
 	right: 0;
 	opacity: 0.3;
 	z-index: -1;
+}
+
+button {
+	@apply px-4 py-2 rounded-lg;
 }
 </style>

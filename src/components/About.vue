@@ -57,6 +57,7 @@ export default {
 }
 
 .circles li {
+	overflow: hidden;
 	position: absolute;
 	display: block;
 	list-style: none;

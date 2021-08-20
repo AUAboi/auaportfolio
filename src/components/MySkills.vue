@@ -47,7 +47,7 @@
 					v-for="(type, index) in toggleTypes"
 					:key="index"
 					@click="navToggle(type)"
-					class="cursor-pointer capitalize rounded-full p-2"
+					class="cursor-pointer capitalize rounded-full p-2 transition-colors duration-250 ease-in-out"
 					:class="currentToggleType === type ? 'bg-purple-400 text-white' : ''"
 				>
 					{{ type }}
@@ -72,7 +72,7 @@
 
 				<div class="grid grid-cols-3 sm:grid-cols-4 text-center">
 					<div
-						class="m-2"
+						class="m-2 cursor-pointer"
 						v-for="(skill, index) in currentArr"
 						:key="index"
 						@click="showProjectsModal(skill.name)"
