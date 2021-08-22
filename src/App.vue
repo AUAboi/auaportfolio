@@ -53,7 +53,7 @@ html {
 }
 
 .section-heading {
-	@apply text-purple-500 text-6xl md:text-9xl opacity-50 mx-3;
+	@apply text-purple-500 text-6xl md:text-7xl opacity-50 mx-3 text-center;
 }
 
 .blob {

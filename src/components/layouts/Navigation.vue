@@ -1,8 +1,8 @@
 <template>
 	<div
 		@click="show = !show"
-		class="menu-btn fixed bg-white right-4 top-8 md:right-10 md:top-6 z-50 cursor-pointer transition-all ease-in-out duration-500"
-		:class="show ? 'transform rotate-180' : ' '"
+		class="menu-btn fixed  rounded-md right-4 top-8 md:right-10 md:top-6 z-50 cursor-pointer transition-all ease-in-out duration-500"
+		:class="show ? 'transform rotate-180' : 'bg-white'"
 	>
 		<div
 			class="btn-line transition-colors ease-out "
@@ -74,7 +74,7 @@ export default {
 </script>
 <style scoped>
 .potrait {
-	background-image: url("../../assets/myimg.jpg");
+	background-image: url("../../assets/myimg.webp");
 }
 .btn-line {
 	@apply w-6 h-1 m-1;

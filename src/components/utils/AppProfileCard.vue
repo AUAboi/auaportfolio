@@ -3,8 +3,10 @@
 		<div class="relative bg-white w-3/4 py-6 px-8 m-auto shadow-2xl rounded-xl">
 			<div>
 				<img
+					width="400"
+					height="400"
 					class="profile-img mx-auto drop-shadow-2xl"
-					src="../../assets/myimg.jpg"
+					src="../../assets/myimg.webp"
 					s
 				/>
 				<h1 class="text-purple-500 text-xl font-bold text-center p-1 m-1">

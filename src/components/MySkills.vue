@@ -43,12 +43,12 @@
 					></path>
 				</svg>
 			</div>
-			<ul class="flex w-full text-3xl justify-around">
+			<ul class="flex w-full text-xl md:text-2xl justify-around">
 				<li
 					v-for="(type, index) in toggleTypes"
 					:key="index"
 					@click="navToggle(type)"
-					class="cursor-pointer capitalize rounded-full p-2 transition-colors duration-250 ease-in-out"
+					class="cursor-pointer capitalize rounded-full p-1 sm:p-2 transition-colors duration-250 ease-in-out"
 					:class="currentToggleType === type ? 'bg-purple-400 text-white' : ''"
 				>
 					{{ type }}
@@ -205,6 +205,12 @@ export default {
 					name: "NodeJS",
 					color: "text-green-800",
 					icon: "fab fa-node"
+				},
+				{
+					type: "backend",
+					name: "Wordpress",
+					color: "text-blue-600",
+					icon: "fab fa-wordpress-simple"
 				}
 			]
 		};
