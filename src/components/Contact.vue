@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
 .bg-pattern {
-	background-image: url("../assets/1629393520688.png");
+	background-image: url("../assets/1629393520688.webp");
 	background-size: contain;
 }
 </style>
