@@ -1,7 +1,9 @@
 <template>
 	<section class="my-10">
 		<h1 class="section-heading">About Me</h1>
-		<article class="area relative mt-8 mb-2 ">
+		<article
+			class="bg-gradient-to-t from-black to-purple-500 w-full relative mt-8 mb-2 "
+		>
 			<ul class="circles">
 				<li></li>
 				<li></li>
@@ -16,7 +18,7 @@
 			</ul>
 			<div class="grid grid-rows-1 md:grid-cols-2 my-4">
 				<AppProfileCard />
-				<div class="bg-purple-500">
+				<div>
 					<p class="text-white px-8 py-4">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
 						veritatis officiis quae voluptates possimus! Hic nisi, reprehenderit
@@ -44,11 +46,6 @@ export default {
 <style scoped>
 /* CSS ONLY ANIMATION FOR SQUARE */
 /* CREDIT: https://codepen.io/mohaiman/pen/MQqMyo */
-.area {
-	background: rgba(139, 92, 246);
-	background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
-	width: 100%;
-}
 
 .circles {
 	width: 100%;

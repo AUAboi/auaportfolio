@@ -1,6 +1,11 @@
 <template>
 	<div>
-		<img class="border-2 border-purple-400" src="../../assets/myimg.jpg" />
+		<img
+			width="400"
+			height="400"
+			class="border-2 border-purple-400"
+			src="../../assets/myimg.jpg"
+		/>
 	</div>
 </template>
 
