@@ -1,11 +1,11 @@
 <template>
 	<div
 		@click="show = !show"
-		class="menu-btn absolute right-4 top-8 md:right-10 md:top-6 z-50 cursor-pointer transition-all ease-in-out duration-500"
+		class="menu-btn fixed bg-white right-4 top-8 md:right-10 md:top-6 z-50 cursor-pointer transition-all ease-in-out duration-500"
 		:class="show ? 'transform rotate-180' : ' '"
 	>
 		<div
-			class="btn-line transition-colors ease-out"
+			class="btn-line transition-colors ease-out "
 			:class="
 				show
 					? 'transform rotate-45 translate-x-0.5 translate-y-2.5 bg-white'

@@ -5,6 +5,7 @@
 				v-if="modalComponent === 'app-portfolio-modal'"
 				@render="modalProject"
 				:projects="sortedProjects"
+				:skill="currentSkill"
 				:is="modalComponent"
 			></component>
 			<component v-else :is="modalComponent" :project="selectedProject">
@@ -139,13 +140,13 @@ export default {
 			skills: [
 				{
 					type: "frontend",
-					name: "HTML5",
+					name: "HTML",
 					icon: "fab fa-html5",
 					color: "text-red-500"
 				},
 				{
 					type: "frontend",
-					name: "CSS3",
+					name: "CSS",
 					icon: "fab fa-css3",
 					color: "text-blue-400"
 				},
@@ -156,9 +157,10 @@ export default {
 					icon: "fab fa-bootstrap",
 					color: "text-purple-600"
 				},
+
 				{
 					type: "frontend",
-					name: "Sass",
+					name: "SCSS",
 					icon: "fab fa-sass",
 					color: "text-pink-600"
 				},
