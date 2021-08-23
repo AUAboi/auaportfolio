@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import AppProfileCard from "@/components/utils/AppProfileCard";
+import AppProfileCard from "@/components/cards/AppProfileCard";
 
 export default {
 	name: "About",

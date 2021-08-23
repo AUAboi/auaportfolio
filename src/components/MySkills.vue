@@ -88,10 +88,10 @@
 </template>
 
 <script>
-import AppModal from "@/components/utils/AppModal";
-import AppProjectModal from "@/components/utils/AppProjectModal";
+import AppModal from "@/components/modals/AppModal";
+import AppProjectModal from "@/components/modals/AppProjectModal";
 
-import AppPortfolioModal from "@/components/utils/AppPortfolioModal";
+import AppPortfolioModal from "@/components/modals/AppPortfolioModal";
 
 export default {
 	name: "MySkills",

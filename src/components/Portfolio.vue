@@ -5,7 +5,7 @@
 		</AppModal>
 		<h1 class="section-heading">My Portfolio</h1>
 		<div class="grid md:grid-cols-2 lg:grid-cols-3">
-			<AppProject
+			<AppProjectCard
 				@show-modal="showModal(project)"
 				v-for="(project, index) in projects"
 				:key="index"
@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import AppProject from "@/components/utils/AppProject";
-import AppModal from "@/components/utils/AppModal";
-import AppProjectModal from "@/components/utils/AppProjectModal";
+import AppProjectCard from "@/components/cards/AppProjectCard";
+import AppModal from "@/components/modals/AppModal";
+import AppProjectModal from "@/components/modals/AppProjectModal";
 
 export default {
 	name: "Portfolio",
 	components: {
-		AppProject,
+		AppProjectCard,
 		AppModal,
 		AppProjectModal
 	},
