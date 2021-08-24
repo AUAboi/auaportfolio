@@ -71,16 +71,13 @@
 					</svg>
 				</div>
 
-				<div class="grid grid-cols-3 sm:grid-cols-4 text-center">
-					<div
-						class="m-2 cursor-pointer"
+				<div class="grid grid-cols-3 sm:grid-cols-4 text-center ">
+					<AppSkill
 						v-for="(skill, index) in currentArr"
 						:key="index"
-						@click="showProjectsModal(skill.name)"
-					>
-						<i class="text-6xl" :class="[skill.icon, skill.color]"></i>
-						<p>{{ skill.name }}</p>
-					</div>
+						:skill="skill"
+						@skill-click="showProjectsModal"
+					/>
 				</div>
 			</div>
 		</article>
@@ -91,6 +88,8 @@
 import AppModal from "@/components/modals/AppModal";
 import AppProjectModal from "@/components/modals/AppProjectModal";
 
+import AppSkill from "@/components/utils/AppSkill";
+
 import AppPortfolioModal from "@/components/modals/AppPortfolioModal";
 
 export default {
@@ -98,7 +97,8 @@ export default {
 	components: {
 		AppModal,
 		AppPortfolioModal,
-		AppProjectModal
+		AppProjectModal,
+		AppSkill
 	},
 	data() {
 		return {

@@ -1,42 +1,18 @@
 <template>
-	<div
-		@click="show = !show"
-		class="menu-btn fixed  rounded-md right-4 top-8 md:right-10 md:top-6 z-50 cursor-pointer transition-all ease-in-out duration-500"
-		:class="show ? 'transform rotate-180' : 'bg-white'"
-	>
-		<div
-			class="btn-line transition-colors ease-out "
-			:class="
-				show
-					? 'transform rotate-45 translate-x-0.5 translate-y-2.5 bg-white'
-					: 'bg-purple-500'
-			"
-		></div>
-		<div
-			:class="show ? 'opacity-0 bg-white' : 'bg-purple-500'"
-			class="btn-line transition-colors ease-out"
-		></div>
-		<div
-			:class="
-				show
-					? 'transform -rotate-45 translate-x-0.5 -translate-y-1.5 bg-white'
-					: 'bg-purple-500'
-			"
-			class="btn-line transition-colors ease-out"
-		></div>
-	</div>
+	<AppNavMenuBtn @click="show = !show" :show="show" />
 	<nav
-		class="nav-bar fixed top-0 w-full opacity-90 z-30 "
+		class="nav-bar fixed top-0 w-full opacity-100 z-30 "
 		:class="show ? 'visible' : 'invisible'"
 	>
 		<div
-			class="nav-branding bg-purple-400"
+			class="nav-branding bg-gradient-to-r md:bg-gradient-to-t from-purple-500 to-purple-200"
 			id="navBranding"
 			:class="show ? 'show' : ''"
 		>
 			<div
 				class="potrait w-40 h-40 border-2 border-purple-600 rounded-full bg-cover"
 			></div>
+			<AppSocials />
 		</div>
 		<ul class="menu-nav bg-black" id="menuNav" :class="show ? 'show' : ''">
 			<li class="nav-item current" :class="show ? 'show' : ''">
@@ -58,12 +34,19 @@
 </template>
 
 <script>
+import AppSocials from "@/components/utils/AppSocials";
+import AppNavMenuBtn from "@/components/utils/AppNavMenuBtn";
+
 export default {
 	name: "Navigation",
 	data() {
 		return {
 			show: false
 		};
+	},
+	components: {
+		AppSocials,
+		AppNavMenuBtn
 	},
 	watch: {
 		show() {
@@ -76,10 +59,9 @@ export default {
 .potrait {
 	background-image: url("../../assets/myimg.webp");
 }
-.btn-line {
-	@apply w-6 h-1 m-1;
+.bg-blur {
+	background-color: rgba(255, 255, 255, 0.2);
 }
-
 .nav-bar .nav-branding,
 .nav-bar .menu-nav {
 	display: -webkit-box;
@@ -162,14 +144,14 @@ export default {
 		-webkit-transform: translate3d(0, 0, 0);
 		transform: translate3d(0, 0, 0);
 	}
-	ul.menu-nav {
+	.nav-bar .menu-nav {
 		height: 75vh;
 		-webkit-transform: translate3d(-100%, 0, 0);
 		transform: translate3d(-100%, 0, 0);
 		font-size: 24px;
 	}
 	div.nav-branding#navBranding {
-		height: 25vh;
+		height: 100%;
 		transform: translate3d(100%, 0, 0);
 	}
 }

@@ -7,7 +7,9 @@
 			Get in touch!
 		</h2>
 		<p class="leading-relaxed mb-5 text-gray-600">
-			Post-ironic portland shabby chic echo park, banjo fashion axe
+			Want to discuss something? Feel free to send me a message and I will get
+			back to you as
+			<span class="font-bold text-purple-600 underline">soon as possible</span>
 		</p>
 		<div class="hidden">
 			<label class="sr-only">Don’t fill this out if you're human: </label>
@@ -52,7 +54,7 @@
 				class="w-full bg-white rounded border border-gray-300 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
 			></textarea>
 		</div>
-		<div v-show="formError" class="text-red-500">
+		<div v-show="formError" class="text-red-500 text-sm">
 			<p>{{ formError }}</p>
 		</div>
 		<div class="text-green-500" v-if="submit">
@@ -62,11 +64,8 @@
 			type="submit"
 			class="text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg"
 		>
-			Button
+			Send
 		</button>
-		<p class="text-xs text-gray-500 mt-3">
-			Chicharrones blog helvetica normcore iceland tousled brook viral artisan.
-		</p>
 	</form>
 </template>
 

@@ -4,6 +4,10 @@ const port = process.env.PORT || 5000;
 const cors = require("cors");
 const dotenv = require("dotenv");
 
+const MongoClient = require("mongodb").MongoClient;
+
+MongoClient.connect("mongodb-connection-string", (err, client) => {});
+
 dotenv.config();
 
 const corsOptions = {

@@ -43,8 +43,12 @@ export default {
 	@apply text-white bg-purple-400;
 }
 
+body {
+	@apply overflow-x-hidden;
+}
+
 #app {
-	@apply mt-6 overflow-x-hidden;
+	@apply mt-6 overflow-x-hidden w-screen;
 	font-family: "Nunito Sans", sans-serif;
 }
 
