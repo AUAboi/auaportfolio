@@ -6,6 +6,8 @@
 		<MySkills @show-modal="true" id="skills" />
 		<Portfolio id="portfolio" />
 		<Contact id="contact" />
+
+		<Services />
 		<Footer />
 	</main>
 </template>
@@ -19,6 +21,7 @@ import About from "@/components/About";
 import MySkills from "@/components/MySkills";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
+import Services from "@/components/Services";
 
 export default {
 	name: "App",
@@ -29,6 +32,7 @@ export default {
 		MySkills,
 		Portfolio,
 		Contact,
+		Services,
 		Footer
 	}
 };

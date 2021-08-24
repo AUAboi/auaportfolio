@@ -1,5 +1,5 @@
 <template>
-	<article class="p-4">
+	<article class="m-4">
 		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
 			<img
 				class="lg:h-48 md:h-36 w-full object-cover object-center"
