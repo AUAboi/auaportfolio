@@ -60,7 +60,7 @@ export default {
 </script>
 <style scoped>
 .potrait {
-	background-image: url("../../assets/myimg.webp");
+	background-image: url("../../assets/myimg2.jpeg");
 }
 .bg-blur {
 	background-color: rgba(255, 255, 255, 0.2);

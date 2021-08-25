@@ -4,7 +4,7 @@
 			width="400"
 			height="400"
 			class="border-2 border-purple-400"
-			src="../../assets/myimg.webp"
+			src="../../assets/myimg2.jpeg"
 		/>
 	</div>
 </template>
