@@ -14,7 +14,7 @@
 			></div>
 			<AppSocials />
 		</div>
-		<ul class="menu-nav bg-black" id="menuNav" :class="show ? 'show' : ''">
+		<ul class="menu-nav bg-gray-900" id="menuNav" :class="show ? 'show' : ''">
 			<li class="nav-item current" :class="show ? 'show' : ''">
 				<a @click="show = false" href="#home" class="nav-link">Home</a>
 			</li>
@@ -28,6 +28,9 @@
 				<a @click="show = false" href="#portfolio" class="nav-link"
 					>Portfolio</a
 				>
+			</li>
+			<li class="nav-item" :class="show ? 'show' : ''">
+				<a @click="show = false" href="#contact" class="nav-link">Contact</a>
 			</li>
 		</ul>
 	</nav>

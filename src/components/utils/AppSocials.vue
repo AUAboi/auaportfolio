@@ -8,9 +8,7 @@
 		<li class="text-gray-800 hover:text-black">
 			<a href="https://github.com/AUAboi"><i class="fab fa-github"></i></a>
 		</li>
-		<li class="text-gray-800 hover:text-blue-400">
-			<a href="https://twitter.com/ahsan_aua"><i class="fab fa-twitter"></i></a>
-		</li>
+
 		<li class="text-gray-800 hover:text-blue-500">
 			<a href="https://www.linkedin.com/in/ahsan-faisal-3a2659191/"
 				><i class="fab fa-linkedin"></i

@@ -32,15 +32,17 @@
 						></path>
 					</svg>
 				</div>
-				<h1 class="text-xl text-purple-400 leading-3 tracking-widest">
+				<h1
+					class="text-lg sm:text-xl text-purple-400 leading-3 tracking-widest"
+				>
 					Full Stack developer
 				</h1>
-				<h2 class="text-4xl text-purple-700 tracking-tight">
-					Heading Secondary
+				<h2 class="text-3xl sm:text-4xl text-purple-700 tracking-tight">
+					Hey, I am Ahsan Faisal
 				</h2>
-				<p class="py-1">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt,
-					accusamus?
+				<p class="p-1">
+					Lets build something
+					<span class="underline text-purple-500">awesome!</span>
 				</p>
 				<div class="my-2">
 					<a href="#portfolio">
