@@ -7,7 +7,9 @@
 		leave-from-class="opacity-100"
 		leave-to-class="opacity-0"
 	>
-		<div class="fixed inset-0 overflow-y-auto bg-black bg-opacity-50 z-50">
+		<div
+			class="fixed inset-0 overflow-y-auto bg-black bg-opacity-50 z-50 w-screen"
+		>
 			<div
 				@click.self="$emit('close')"
 				class="flex items-start justify-center min-h-screen pt-10 text-center"

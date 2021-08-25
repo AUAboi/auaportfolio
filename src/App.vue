@@ -52,7 +52,7 @@ body {
 }
 
 #app {
-	@apply mt-6 overflow-x-hidden w-screen;
+	@apply mt-6 overflow-x-hidden md:w-screen;
 	font-family: "Nunito Sans", sans-serif;
 }
 

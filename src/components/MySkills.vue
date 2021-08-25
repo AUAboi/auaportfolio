@@ -160,6 +160,13 @@ export default {
 
 				{
 					type: "frontend",
+					name: "Tailwindcss",
+					svg:
+						"https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+				},
+
+				{
+					type: "frontend",
 					name: "SCSS",
 					icon: "fab fa-sass",
 					color: "text-pink-600"
@@ -205,6 +212,11 @@ export default {
 					name: "NodeJS",
 					color: "text-green-800",
 					icon: "fab fa-node"
+				},
+				{
+					type: "backend",
+					name: "MongoDB",
+					svg: "https://www.vectorlogo.zone/logos/mongodb/mongodb-ar21.svg"
 				},
 				{
 					type: "backend",

@@ -1,34 +1,136 @@
 <template>
 	<section class="text-gray-400 bg-gray-900 body-font">
 		<div class="container px-5 py-24 mx-auto">
-			<div
-				class="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto"
-			>
+			<div class="text-center mb-20">
 				<h1
-					class="flex-grow sm:pr-16 text-2xl font-medium title-font text-white"
+					class="sm:text-3xl text-2xl font-medium text-center title-font text-white mb-4"
 				>
-					Get my services from
+					Services
 				</h1>
-				<button
-					class="flex align-middle flex-shrink-0 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg mt-10 sm:mt-0"
-				>
-					<svg
-						class="w-4"
-						enable-background="new 0 0 2500 2500"
-						viewBox="0 0 2500 2500"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="m2315.4 0h-2130.7c-102 0-184.7 80.2-184.7 179.1v2141.7c0 99 82.7 179.2 184.7 179.2h2130.7c102 0 184.6-80.3 184.6-179.2v-2141.7c0-98.9-82.6-179.1-184.6-179.1z"
-							fill="#6fda44"
-						/>
-						<path
-							d="m1834.6 1453.7c-98.4 0-190.5-41.7-274.3-109.6l20.4-95.8.9-3.5c18.2-102 75.8-273.3 253-273.3 132.9 0 241 108.3 241 241.3-.4 132.6-108.5 240.9-241 240.9zm0-726.7c-226.4 0-401.9 147.3-473.2 389.5-109-163.7-191.4-360.2-239.7-525.7h-243.6v634.8c0 125.1-101.9 227.1-226.9 227.1s-226.8-102-226.8-227.1v-634.8h-243.7v634.8c-.9 260 210.5 473.4 470.1 473.4s471-213.4 471-473.4v-106.5c47.4 98.9 105.4 198.7 175.9 287.5l-149.3 702.7h249.5l108.1-509.7c94.8 60.8 203.8 98.9 328.8 98.9 267.2 0 484.7-219.2 484.7-486.7-.2-267-217.7-484.8-484.9-484.8z"
-							fill="#fff"
-						/></svg
-					>Upwrok
-				</button>
+				<p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+					Some of the core services that I provide. Feel free to contact me
+					about any web related service and we discuss further
+				</p>
 			</div>
+			<div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+				<div class="p-2 sm:w-1/2 w-full">
+					<div class="bg-gray-800 rounded flex p-4 h-full items-center">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							class="text-purple-400 w-6 h-6 flex-shrink-0 mr-4"
+							viewBox="0 0 24 24"
+						>
+							<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+							<path d="M22 4L12 14.01l-3-3"></path>
+						</svg>
+						<span class="title-font font-medium text-white"
+							>Frontend Web-development</span
+						>
+					</div>
+				</div>
+				<div class="p-2 sm:w-1/2 w-full">
+					<div class="bg-gray-800 rounded flex p-4 h-full items-center">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							class="text-purple-400 w-6 h-6 flex-shrink-0 mr-4"
+							viewBox="0 0 24 24"
+						>
+							<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+							<path d="M22 4L12 14.01l-3-3"></path>
+						</svg>
+						<span class="title-font font-medium text-white"
+							>Backend Web-development</span
+						>
+					</div>
+				</div>
+				<div class="p-2 sm:w-1/2 w-full">
+					<div class="bg-gray-800 rounded flex p-4 h-full items-center">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							class="text-purple-400 w-6 h-6 flex-shrink-0 mr-4"
+							viewBox="0 0 24 24"
+						>
+							<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+							<path d="M22 4L12 14.01l-3-3"></path>
+						</svg>
+						<span class="title-font font-medium text-white"
+							>Fullstack Web-Applications</span
+						>
+					</div>
+				</div>
+				<div class="p-2 sm:w-1/2 w-full">
+					<div class="bg-gray-800 rounded flex p-4 h-full items-center">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							class="text-purple-400 w-6 h-6 flex-shrink-0 mr-4"
+							viewBox="0 0 24 24"
+						>
+							<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+							<path d="M22 4L12 14.01l-3-3"></path>
+						</svg>
+						<span class="title-font font-medium text-white"
+							>Javascript Development</span
+						>
+					</div>
+				</div>
+				<div class="p-2 sm:w-1/2 w-full">
+					<div class="bg-gray-800 rounded flex p-4 h-full items-center">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							class="text-purple-400 w-6 h-6 flex-shrink-0 mr-4"
+							viewBox="0 0 24 24"
+						>
+							<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+							<path d="M22 4L12 14.01l-3-3"></path>
+						</svg>
+						<span class="title-font font-medium text-white">Web Design</span>
+					</div>
+				</div>
+				<div class="p-2 sm:w-1/2 w-full">
+					<div class="bg-gray-800 rounded flex p-4 h-full items-center">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="3"
+							class="text-purple-400 w-6 h-6 flex-shrink-0 mr-4"
+							viewBox="0 0 24 24"
+						>
+							<path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+							<path d="M22 4L12 14.01l-3-3"></path>
+						</svg>
+						<span class="title-font font-medium text-white">Wordpress</span>
+					</div>
+				</div>
+			</div>
+			<button
+				class="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg"
+			>
+				<a href="#">
+					Upwork
+				</a>
+			</button>
 		</div>
 	</section>
 </template>
