@@ -14,10 +14,11 @@
 					</h2>
 					<p class="mt-4 p-2">
 						Hey, my name is Ahsan. I am a freelance web developer based in
-						Faisalabad, Pakistan. I am really passionate about programming and
-						web development, thats why I am always willing to learn and get
-						better. Some of my other hobbies beside this stuff include reading
-						books and gaming
+						Faisalabad, Pakistan. I have always been really passionate about
+						problem solving and puzzles. Web development, and programming in
+						genral scratches that itch perfectly. Thats why I am always willing
+						to learn and get better. Some of my other hobbies beside this stuff
+						include reading books and gaming
 					</p>
 				</div>
 			</div>

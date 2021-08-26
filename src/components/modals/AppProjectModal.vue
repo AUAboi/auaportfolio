@@ -14,7 +14,7 @@
 			<h2 class="font-semibold tracking-wide my-3">
 				Notable Technologies used
 			</h2>
-			<ul class="text-gray-400 flex justify-around">
+			<ul class="text-gray-400 flex justify-around flex-col sm:flex-row">
 				<li
 					v-for="(skill, index) in project.skills"
 					:key="index"
