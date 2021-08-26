@@ -4,7 +4,7 @@
 			<component :project="selectedProject" :is="modalComponent"></component>
 		</AppModal>
 		<h1 class="section-heading">My Portfolio</h1>
-		<div class="grid md:grid-cols-2 lg:grid-cols-3">
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2">
 			<AppProjectCard
 				@show-modal="showModal(project)"
 				v-for="(project, index) in projects"
