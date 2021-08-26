@@ -3,7 +3,7 @@
 		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
 			<img
 				class="lg:h-48 md:h-36 w-full object-cover object-center"
-				:src="'../../assets/portfolio/' + project.img"
+				:src="getImgUrl(project.img)"
 				alt="project"
 			/>
 			<div class="p-6">
@@ -51,6 +51,12 @@ export default {
 		project: {
 			required: true,
 			type: Object
+		}
+	},
+	methods: {
+		getImgUrl(img) {
+			if (img === undefined) return require('../../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg');
+			return require(`../../assets/portfolio/${img}`);
 		}
 	}
 };
