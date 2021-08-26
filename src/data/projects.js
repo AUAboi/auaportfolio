@@ -49,8 +49,8 @@ const projects = [
     intro: "Portfolio site fully custom made",
     details: "Portfolio made with node and express backend with vueJS frontend",
     skills: ["vuejs", "nodejs", "expressjs", "mongodb", "tailwindcss"],
-    link: "https://cafe-modern.000webhostapp.com/cafe-master/dist/index.php",
-    github: "https://github.com/AUAboi/auaboi.github.io/tree/master/auaahsan",
+    link: "https://ahsanfaisal.me/",
+    github: "https://github.com/AUAboi/auaportfolio",
     img: "this.webp",
   },
 ];

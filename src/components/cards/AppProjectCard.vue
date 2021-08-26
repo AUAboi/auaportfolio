@@ -2,6 +2,7 @@
 	<article class="sm:m-4 w-5/6 mx-auto">
 		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
 			<img
+				loading="lazy"
 				class="lg:h-48 md:h-36 w-full object-cover object-center"
 				:src="getImgUrl(project.img)"
 				alt="project"
