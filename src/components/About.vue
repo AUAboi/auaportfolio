@@ -18,7 +18,7 @@
 						problem solving and puzzles. Web development, and programming in
 						genral scratches that itch perfectly. Thats why I am always willing
 						to learn and get better. Some of my other hobbies beside this stuff
-						include reading books and gaming
+						includes reading books and gaming
 					</p>
 				</div>
 			</div>
