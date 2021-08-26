@@ -9,7 +9,7 @@
 				</h1>
 				<p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
 					Some of the core services that I provide. Feel free to contact me
-					about any web related service and we discuss further
+					about any web related service and we can discuss further
 				</p>
 			</div>
 			<div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
