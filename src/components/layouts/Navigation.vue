@@ -15,7 +15,7 @@
 			<AppSocials />
 		</div>
 		<ul class="menu-nav bg-gray-900" id="menuNav" :class="show ? 'show' : ''">
-			<li class="nav-item current" :class="show ? 'show' : ''">
+			<li class="nav-item" :class="show ? 'show' : ''">
 				<a @click="show = false" href="#home" class="nav-link">Home</a>
 			</li>
 			<li class="nav-item" :class="show ? 'show' : ''">
@@ -60,7 +60,7 @@ export default {
 </script>
 <style scoped>
 .potrait {
-	background-image: url("../../assets/myimg2.jpeg");
+	background-image: url("../../assets/myimg4.webp");
 }
 .bg-blur {
 	background-color: rgba(255, 255, 255, 0.2);

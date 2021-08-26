@@ -34,6 +34,11 @@ export default {
 		Contact,
 		Services,
 		Footer
+	},
+	methods: {
+		logThis(bool) {
+			console.log(bool);
+		}
 	}
 };
 </script>

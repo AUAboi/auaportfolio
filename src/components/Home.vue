@@ -42,7 +42,7 @@
 				</h2>
 				<div class="flex">
 					<h3 class="text-2xl sm:text-3xl text-purple-600 tracking-tight">
-						I make &lt; Websites /&gt;
+						I make Websites 
 					</h3>
 				</div>
 

@@ -7,7 +7,7 @@
 					width="400"
 					height="400"
 					class="profile-img mx-auto drop-shadow-2xl"
-					src="../../assets/myimg3.jpeg"
+					src="../../assets/myimg3.webp"
 				/>
 				<h1 class="text-purple-500 text-xl font-bold text-center p-1 m-1">
 					Ahsan Faisal
