@@ -37,9 +37,28 @@
 				>
 					Full Stack developer
 				</h1>
-				<h2 class="text-3xl sm:text-4xl text-purple-700 tracking-tight">
+				<h2 class="text-3xl sm:text-4xl text-purple-700 tracking-tight py-1">
 					Hey, I am Ahsan Faisal
 				</h2>
+				<div class="flex">
+					<h3 class="text-2xl sm:text-3xl text-purple-600 tracking-tight">
+						I make &nbsp;
+					</h3>
+					<div class="container__textslider--outer">
+						<div class="container__textslider--inner">
+							<h3 class="text-2xl sm:text-3xl text-purple-600 tracking-tight">
+								websites
+							</h3>
+							<h3 class="text-2xl sm:text-3xl text-purple-600 tracking-tight">
+								webapps
+							</h3>
+							<h3 class="text-2xl sm:text-3xl text-purple-600 tracking-tight">
+								Expriences
+							</h3>
+						</div>
+					</div>
+				</div>
+
 				<p class="p-1">
 					Lets build something
 					<span class="underline text-purple-500">awesome!</span>
@@ -82,5 +101,36 @@ export default {
 
 button {
 	@apply px-4 py-2 rounded-lg;
+}
+
+.container__textslider--outer {
+	max-width: 300px;
+	overflow: hidden;
+	height: 35px;
+}
+
+.container__textslider--inner {
+	animation: slidetext 6 ease-in-out 1s infinite;
+}
+
+@keyframes slidetext {
+	0% {
+		margin-top: 0;
+	}
+
+	25%,
+	35% {
+		margin-top: -35px; /* height of individual text */
+	}
+
+	60%,
+	70% {
+		margin-top: -70px;
+	}
+
+	90%,
+	100% {
+		margin-top: 0;
+	}
 }
 </style>

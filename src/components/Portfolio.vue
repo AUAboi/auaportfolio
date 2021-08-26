@@ -20,6 +20,8 @@ import AppProjectCard from "@/components/cards/AppProjectCard";
 import AppModal from "@/components/modals/AppModal";
 import AppProjectModal from "@/components/modals/AppProjectModal";
 
+import projects from "@/data/projects";
+
 export default {
 	name: "Portfolio",
 	components: {
@@ -37,22 +39,7 @@ export default {
 				details: "",
 				skills: []
 			},
-			projects: [
-				{
-					title: "Cafe App",
-					intro: "A small cafe website I built for a client",
-					details:
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
-					skills: ["jquery", "php", "mysql"]
-				},
-				{
-					title: "Quiz Site",
-					intro: "Demo for quiz app",
-					details:
-						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque alias error vero deleniti illo temporibus, eos eaque perferendis similique accusamus doloribus nostrum suscipit asperiores quasi et debitis tempore commodi ex.",
-					skills: ["laravel", "mysql", "vue"]
-				}
-			]
+			projects: []
 		};
 	},
 	methods: {
@@ -70,6 +57,9 @@ export default {
 			//Hide overflow when modal shown
 			document.querySelector("body").classList.toggle("overflow-y-hidden");
 		}
+	},
+	created() {
+		this.projects = projects;
 	}
 };
 </script>

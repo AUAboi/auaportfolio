@@ -160,20 +160,29 @@
 					</div>
 				</div>
 			</div>
-			<button
-				class="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg"
-			>
-				<a href="#">
-					Upwork
+			<div class="flex justify-evenly">
+				<a href="https://www.fiverr.com/ahsan_aua">
+					<button
+						class="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg"
+					>
+						Fiverr
+					</button>
 				</a>
-			</button>
+
+				<a href="https://www.upwork.com/freelancers/~01fa5bfbcbbdf6b320">
+					<button
+						class="flex mx-auto mt-16 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg"
+					>
+						Upwork
+					</button>
+				</a>
+			</div>
 		</div>
 	</section>
 </template>
 
 <script>
-export default {};
+export default {
+	name: "Services"
+};
 </script>
-
-<style>
-</style>

@@ -3,8 +3,8 @@
 		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
 			<img
 				class="lg:h-48 md:h-36 w-full object-cover object-center"
-				src="../../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg"
-				alt="blog"
+				:src="'../../assets/portfolio/' + project.img"
+				alt="project"
 			/>
 			<div class="p-6">
 				<span

@@ -9,6 +9,16 @@
 			<p class="mt-1">
 				Faisalbad, Pakistan.
 			</p>
+			<h2
+				class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4"
+			>
+				Whatsapp
+			</h2>
+			<p class="leading-relaxed">
+				<a href="https://wa.me/+92314522363 ">
+					+92-3214522363
+				</a>
+			</p>
 		</div>
 		<div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
 			<h2
@@ -16,7 +26,11 @@
 			>
 				EMAIL
 			</h2>
-			<a class="text-purple-500 leading-relaxed">auawdigital@gmail.com</a>
+			<a
+				href="mailto:auawdigital@gmail.com"
+				class="text-purple-500 leading-relaxed"
+				>auawdigital@gmail.com</a
+			>
 			<h2
 				class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4"
 			>
