@@ -5,7 +5,7 @@
 				loading="lazy"
 				class="lg:h-48 md:h-36 w-full object-cover object-center"
 				:src="getImgUrl(project.img)"
-				alt="project"
+				:alt="project.title"
 			/>
 			<div class="pl-1 py-1 md:p-6">
 				<span

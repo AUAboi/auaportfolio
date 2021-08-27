@@ -2,7 +2,12 @@
 	<div>
 		<h1 class="text-xl font-semibold">{{ project.title }}</h1>
 		<div class="w-full my-2">
-			<img laoding="lazy" :src="getImgUrl(project.img)" class="rounded-md" />
+			<img
+				laoding="lazy"
+				:src="getImgUrl(project.img)"
+				class="rounded-md"
+				:alt="project.title"
+			/>
 		</div>
 		<div>
 			<h2 class="font-semibold tracking-wide">About</h2>

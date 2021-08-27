@@ -12,6 +12,7 @@
 				@click="$emit('skill-click', skill.name)"
 				class="inline cursor-pointer"
 				:src="skill.svg"
+				:alt="skill.name"
 			/>
 		</div>
 

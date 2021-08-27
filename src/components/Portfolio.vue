@@ -20,17 +20,14 @@ import AppProjectCard from "@/components/cards/AppProjectCard";
 import AppModal from "@/components/modals/AppModal";
 import AppProjectModal from "@/components/modals/AppProjectModal";
 
+import projects from "@/data/projects";
+
 export default {
 	name: "Portfolio",
 	components: {
 		AppProjectCard,
 		AppModal,
 		AppProjectModal
-	},
-	props: {
-		projects: {
-			required: true
-		}
 	},
 	data() {
 		return {
@@ -41,7 +38,8 @@ export default {
 				intro: "",
 				details: "",
 				skills: []
-			}
+			},
+			projects: []
 		};
 	},
 	methods: {
@@ -59,6 +57,9 @@ export default {
 			//Hide overflow when modal shown
 			document.querySelector("body").classList.toggle("overflow-y-hidden");
 		}
+	},
+	created() {
+		this.projects = projects;
 	}
 };
 </script>

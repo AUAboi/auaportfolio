@@ -90,6 +90,9 @@ import AppProjectModal from "@/components/modals/AppProjectModal";
 import AppSkill from "@/components/utils/AppSkill";
 import AppPortfolioModal from "@/components/modals/AppPortfolioModal";
 
+import projects from "@/data/projects";
+import skills from "@/data/skills";
+
 export default {
 	name: "MySkills",
 	components: {
@@ -97,14 +100,6 @@ export default {
 		AppPortfolioModal,
 		AppProjectModal,
 		AppSkill
-	},
-	props: {
-		projects: {
-			required: true
-		},
-		skills: {
-			required: true
-		}
 	},
 	data() {
 		return {
@@ -117,9 +112,11 @@ export default {
 				details: "",
 				skills: []
 			},
+			projects: [],
 			currentSkill: "",
 			toggleTypes: ["all", "frontend", "backend"],
-			currentToggleType: "all"
+			currentToggleType: "all",
+			skills: []
 		};
 	},
 	methods: {
@@ -165,6 +162,10 @@ export default {
 				document.querySelector("body").classList.remove("overflow-y-hidden");
 			}
 		}
+	},
+	created() {
+		this.skills = skills;
+		this.projects = projects;
 	}
 };
 </script>
