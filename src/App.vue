@@ -3,8 +3,8 @@
 	<main>
 		<Home class="md:mx-16" id="home" />
 		<About id="about" />
-		<MySkills @show-modal="true" id="skills" />
-		<Portfolio id="portfolio" />
+		<MySkills :projects="projects" :skills="skills" id="skills" />
+		<Portfolio :projects="projects" id="portfolio" />
 		<Contact id="contact" />
 
 		<Services />
@@ -23,6 +23,9 @@ import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Services from "@/components/Services";
 
+import projects from "@/data/projects";
+import skills from "@/data/skills";
+
 export default {
 	name: "App",
 	components: {
@@ -35,10 +38,15 @@ export default {
 		Services,
 		Footer
 	},
-	methods: {
-		logThis(bool) {
-			console.log(bool);
+	data(){
+		return {
+			projects: [],
+			skills: []
 		}
+	},
+	mounted() {
+		this.projects = projects;
+		this.skills = skills;
 	}
 };
 </script>
