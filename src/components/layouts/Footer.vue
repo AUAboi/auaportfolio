@@ -15,7 +15,7 @@
 			>
 				© 2021 Ahsan Faisal —
 				<a
-					href="https://twitter.com/ahsan_aua"
+					href="https://twitter.com/"
 					class="text-gray-500 ml-1"
 					target="_blank"
 					rel="noopener noreferrer"
@@ -26,6 +26,7 @@
 				class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
 			>
 				<a
+					target="_blank"
 					href="https://www.facebook.com/ahsan.faisal.925/"
 					class="text-gray-400"
 				>
@@ -42,7 +43,11 @@
 						></path>
 					</svg>
 				</a>
-				<a href="https://twitter.com/ahsan_aua" class="ml-3 text-gray-400">
+				<a
+					target="_blank"
+					href="https://twitter.com/"
+					class="ml-3 text-gray-400"
+				>
 					<svg
 						fill="currentColor"
 						stroke-linecap="round"
@@ -56,7 +61,11 @@
 						></path>
 					</svg>
 				</a>
-				<a href="https://github.com/AUAboi" class="ml-3 text-gray-400">
+				<a
+					target="_blank"
+					href="https://github.com/AUAboi"
+					class="ml-3 text-gray-400"
+				>
 					<svg
 						fill="currentColor"
 						stroke="currentColor"
@@ -72,6 +81,7 @@
 					</svg>
 				</a>
 				<a
+					target="_blank"
 					href="https://www.linkedin.com/in/ahsan-faisal-3a2659191/"
 					class="ml-3 text-gray-400"
 				>
