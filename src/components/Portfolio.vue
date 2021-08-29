@@ -5,12 +5,26 @@
 		</AppModal>
 		<h1 class="section-heading">My Portfolio</h1>
 		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2">
-			<AppProjectCard
-				@show-modal="showModal(project)"
-				v-for="(project, index) in projects"
-				:key="index"
-				:project="project"
-			/>
+			<div v-for="(project, index) in projects" :key="index">
+				<div v-if="limit">
+					<AppProjectCard
+						v-if="index < 3"
+						@show-modal="showModal(project)"
+						:project="project"
+					/>
+				</div>
+				<div v-else>
+					<AppProjectCard @show-modal="showModal(project)" :project="project" />
+				</div>
+			</div>
+		</div>
+		<div class="text-center my-4">
+			<button
+				class="py-2 px-3 transition-colors bg-white text-purple-700 border-2 border-purple-700 rounded hover:bg-purple-500 hover:text-white"
+				@click="limit = !limit"
+			>
+				{{ limit ? "See More" : "See Less" }}
+			</button>
 		</div>
 	</section>
 </template>
@@ -39,7 +53,8 @@ export default {
 				details: "",
 				skills: []
 			},
-			projects: []
+			projects: [],
+			limit: true
 		};
 	},
 	methods: {
