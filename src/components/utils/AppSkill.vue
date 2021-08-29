@@ -9,6 +9,8 @@
 		</div>
 		<div v-else-if="skill.svg">
 			<img
+				height="60"
+				width="90"
 				@click="$emit('skill-click', skill.name)"
 				class="inline cursor-pointer"
 				:src="skill.svg"

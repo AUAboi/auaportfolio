@@ -3,6 +3,8 @@
 		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
 			<img
 				loading="lazy"
+				height="600"
+				width="1200"
 				class="lg:h-48 md:h-36 w-full object-cover object-center"
 				:src="getImgUrl(project.img)"
 				:alt="project.title"
