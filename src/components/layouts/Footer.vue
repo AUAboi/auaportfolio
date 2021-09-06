@@ -15,11 +15,11 @@
 			>
 				© 2021 Ahsan Faisal —
 				<a
-					href="https://twitter.com/"
+					href="https://twitter.com/realahsanfaisal"
 					class="text-gray-500 ml-1"
 					target="_blank"
 					rel="noopener noreferrer"
-					>@AhsanAUA</a
+					>@realahsanfaisal</a
 				>
 			</p>
 			<span
@@ -45,7 +45,7 @@
 				</a>
 				<a
 					target="_blank"
-					href="https://twitter.com/"
+					href="https://twitter.com/realahsanfaisal"
 					class="ml-3 text-gray-400"
 				>
 					<svg
