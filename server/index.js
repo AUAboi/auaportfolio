@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 //routes
 const mail = require("./routes/mail");
 
-app.use("/api/send-mail", cors(), mail);
+app.use("/api/send-mail", cors(corsOptions), mail);
 app.get("/", (req, res) => {
   res.send(`Welcome to ${process.env.VUE_APP_URL}`);
 });
