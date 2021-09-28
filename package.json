@@ -16,11 +16,11 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-rate-limit": "^5.3.0",
-    "mailgun-js": "^0.22.0",
     "mongodb": "^4.1.0",
     "mongoose": "^6.0.5",
     "nodemailer": "^6.6.3",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue-easy-lightbox": "^1.2.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

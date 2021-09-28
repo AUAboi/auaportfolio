@@ -5,7 +5,7 @@ const projects = [
     details:
       "Website for a cafe built with php backend and mysql database. It has a complete Admin panel backend and authentication. For content management, I built a very simple and basic custom CMS. Adding and removing categories and dishes can be done using CMS. Design for the frontend template alomg with backend is all custom made according to clients specifications",
     skills: ["javascript", "php", "mysql", "tailwindcss"],
-    img: "cafeimg.webp",
+    img: ["cafeimg.webp"],
     link: "https://cafe-modern.000webhostapp.com/cafe-master/dist/index.php",
   },
   {
@@ -14,7 +14,7 @@ const projects = [
     details:
       "A personal project I built with laravel API and vueJS frontend. Frontend and backend are completely decoupled, and communicate with axios requests. There's also admin panel to add/remove questions and answers for site admin.",
     skills: ["laravel", "mysql", "vuejs", "tailwindcss"],
-    img: "quizimg.webp",
+    img: ["quizimg.webp"],
     github: "https://github.com/AUAboi/vue_quiz/",
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     details:
       "Webapp that I built for a client to manage sales, inventory and payments for a store. I used laravel for the whole thing. Tailwindcss was used for styling. This app was for internal use only so no public url",
     skills: ["laravel", "mysql", "bootstrap"],
-    img: "inventoryimg.webp",
+    img: ["inventoryimg.webp"],
   },
   {
     title: "Portfolio Site",
@@ -32,7 +32,7 @@ const projects = [
     skills: ["html", "scss", "javascript"],
     link: "https://cafe-modern.000webhostapp.com/cafe-master/dist/index.php",
     github: "https://github.com/AUAboi/auaboi.github.io/tree/master/auaahsan",
-    img: "portfolioimg.webp",
+    img: ["portfolioimg.webp"],
   },
   {
     title: "AA Threads Website",
@@ -42,7 +42,7 @@ const projects = [
     skills: ["wordpress", "elementor", "cms"],
     link: "https://cafe-modern.000webhostapp.com/cafe-master/dist/index.php",
     github: "https://github.com/AUAboi/auaboi.github.io/tree/master/auaahsan",
-    img: "aathreadsimg.webp",
+    img: ["aathreadsimg.webp"],
   },
   {
     title: "This Site",
@@ -51,7 +51,7 @@ const projects = [
     skills: ["vuejs", "nodejs", "expressjs", "mongodb", "tailwindcss"],
     link: "https://ahsanfaisal.me/",
     github: "https://github.com/AUAboi/auaportfolio",
-    img: "this.webp",
+    img: ["this.webp"],
   },
 ];
 

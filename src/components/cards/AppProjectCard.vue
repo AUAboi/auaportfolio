@@ -1,14 +1,28 @@
 <template>
+	<vue-easy-lightbox
+		:visible="visible"
+		:imgs="projectImages"
+		:index="index"
+		@hide="handleHide"
+	></vue-easy-lightbox>
 	<article class="sm:m-4 w-5/6 mx-auto">
 		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
-			<img
-				loading="lazy"
-				height="600"
-				width="1200"
-				class="lg:h-48 md:h-36 w-full object-cover object-center"
-				:src="getImgUrl(project.img)"
-				:alt="project.title"
-			/>
+			<div
+				v-for="(img, index) in projectImages"
+				:key="index"
+				class="pic"
+				@click="() => showImg(index)"
+			>
+				<img
+					loading="lazy"
+					height="600"
+					width="1200"
+					class="lg:h-48 md:h-36 w-full object-cover object-center"
+					:src="img"
+					:alt="project.title"
+				/>
+			</div>
+
 			<div class="pl-1 py-1 md:p-6">
 				<span
 					v-for="(skill, index) in project.skills"
@@ -56,12 +70,33 @@ export default {
 			type: Object
 		}
 	},
+	data() {
+		return {
+			visible: false,
+			index: 0,
+			projectImages: []
+		};
+	},
 	methods: {
-		getImgUrl(img) {
-			if (img === undefined)
-				return require("../../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg");
-			return require(`../../assets/portfolio/${img}`);
+		getImgUrl() {
+			let imgs = this.project.img;
+
+			imgs.forEach(img => {
+				this.projectImages.push(require(`../../assets/portfolio/${img}`));
+			});
+		},
+
+		showImg(index) {
+			this.index = index;
+			this.visible = true;
+		},
+
+		handleHide() {
+			this.visible = false;
 		}
+	},
+	created() {
+		this.getImgUrl();
 	}
 };
 </script>
