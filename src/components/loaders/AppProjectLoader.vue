@@ -29,7 +29,7 @@
 
 <script>
 export default {
-	name: "AppProfileLoader.vue"
+	name: "AppProfileLoader"
 };
 </script>
 

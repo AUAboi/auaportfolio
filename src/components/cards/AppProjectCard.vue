@@ -14,13 +14,14 @@
 				@click="showImg(index)"
 			>
 				<img
+					v-show="loaded"
 					v-if="index < 1"
-					loading="lazy"
 					height="600"
 					width="1200"
 					class="lg:h-48 md:h-36 w-full object-cover object-center"
 					:src="img"
 					:alt="project.title"
+					@load="loaded = true"
 				/>
 			</div>
 
@@ -40,7 +41,7 @@
 				</p>
 				<div class="flex items-center flex-wrap ">
 					<a
-						@click.prevent="$emit('show-modal', project)"
+						@click.prevent="$emit('showmodal', project)"
 						class="text-purple-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer"
 						>Learn More
 						<svg
@@ -59,23 +60,31 @@
 				</div>
 			</div>
 		</div>
+		<AppProjectLoader v-if="!loaded" />
 	</article>
 </template>
 
 <script>
+import AppProjectLoader from "@/components/loaders/AppProjectLoader";
+
 export default {
 	name: "AppProject",
+	emits: ["showmodal"],
 	props: {
 		project: {
 			required: true,
 			type: Object
 		}
 	},
+	components: {
+		AppProjectLoader
+	},
 	data() {
 		return {
 			visible: false,
 			index: 0,
-			projectImages: []
+			projectImages: [],
+			loaded: false
 		};
 	},
 	methods: {

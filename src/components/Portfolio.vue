@@ -9,12 +9,12 @@
 				<div v-if="limit">
 					<AppProjectCard
 						v-if="index < 3"
-						@show-modal="showModal(project)"
+						@showmodal="showModal(project)"
 						:project="project"
 					/>
 				</div>
 				<div v-else>
-					<AppProjectCard @show-modal="showModal(project)" :project="project" />
+					<AppProjectCard @showmodal="showModal(project)" :project="project" />
 				</div>
 			</div>
 		</div>

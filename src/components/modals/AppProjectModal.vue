@@ -14,6 +14,7 @@
 				@click="showImg(index)"
 			>
 				<img
+					v-if="index <1"
 					loading="lazy"
 					class="rounded-md"
 					:src="img"
@@ -89,8 +90,7 @@ export default {
 	},
 	methods: {
 		getImgUrl() {
-			let imgs = this.project.img;
-
+			let imgs = this.project.img || [];
 			imgs.forEach(img => {
 				this.projectImages.push(require(`../../assets/portfolio/${img}`));
 			});
@@ -105,8 +105,10 @@ export default {
 			this.visible = false;
 		}
 	},
-	created() {
-		this.getImgUrl();
+	watch: {
+		project() {
+			this.getImgUrl();
+		}
 	}
 };
 </script>
