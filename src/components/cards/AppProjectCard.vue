@@ -11,9 +11,10 @@
 				v-for="(img, index) in projectImages"
 				:key="index"
 				class="pic"
-				@click="() => showImg(index)"
+				@click="showImg(index)"
 			>
 				<img
+					v-if="index < 1"
 					loading="lazy"
 					height="600"
 					width="1200"

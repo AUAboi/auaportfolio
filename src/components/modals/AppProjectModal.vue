@@ -1,13 +1,25 @@
 <template>
 	<div>
+		<vue-easy-lightbox
+			:visible="visible"
+			:imgs="projectImages"
+			:index="index"
+			@hide="handleHide"
+		></vue-easy-lightbox>
 		<h1 class="text-xl font-semibold">{{ project.title }}</h1>
 		<div class="w-full my-2">
-			<img
-				laoding="lazy"
-				:src="getImgUrl(project.img)"
-				class="rounded-md"
-				:alt="project.title"
-			/>
+			<div
+				v-for="(img, index) in projectImages"
+				:key="index"
+				@click="showImg(index)"
+			>
+				<img
+					loading="lazy"
+					class="rounded-md"
+					:src="img"
+					:alt="project.title"
+				/>
+			</div>
 		</div>
 		<div>
 			<h2 class="font-semibold tracking-wide">About</h2>
@@ -68,12 +80,33 @@ export default {
 			type: Object
 		}
 	},
+	data() {
+		return {
+			visible: false,
+			index: 0,
+			projectImages: []
+		};
+	},
 	methods: {
-		getImgUrl(img) {
-			if (img === undefined)
-				return require("../../assets/arnold-francisca-f77Bh3inUpE-unsplash.jpg");
-			return require(`../../assets/portfolio/${img}`);
+		getImgUrl() {
+			let imgs = this.project.img;
+
+			imgs.forEach(img => {
+				this.projectImages.push(require(`../../assets/portfolio/${img}`));
+			});
+		},
+
+		showImg(index) {
+			this.index = index;
+			this.visible = true;
+		},
+
+		handleHide() {
+			this.visible = false;
 		}
+	},
+	created() {
+		this.getImgUrl();
 	}
 };
 </script>

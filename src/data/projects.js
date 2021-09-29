@@ -5,7 +5,7 @@ const projects = [
     details:
       "Website for a cafe built with php backend and mysql database. It has a complete Admin panel backend and authentication. For content management, I built a very simple and basic custom CMS. Adding and removing categories and dishes can be done using CMS. Design for the frontend template alomg with backend is all custom made according to clients specifications",
     skills: ["javascript", "php", "mysql", "tailwindcss"],
-    img: ["cafeimg.webp"],
+    img: ["cafeimg.webp", "cafeimg2.webp"],
     link: "https://cafe-modern.000webhostapp.com/cafe-master/dist/index.php",
   },
   {
