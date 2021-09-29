@@ -6,7 +6,10 @@
 		@hide="handleHide"
 	></vue-easy-lightbox>
 	<article class="sm:m-4 w-5/6 mx-auto">
-		<div class="border-2 border-gray-200 rounded-lg overflow-hidden">
+		<div
+			v-show="loaded"
+			class="border-2 border-gray-200 rounded-lg overflow-hidden"
+		>
 			<div
 				v-for="(img, index) in projectImages"
 				:key="index"
@@ -14,7 +17,6 @@
 				@click="showImg(index)"
 			>
 				<img
-					v-show="loaded"
 					v-if="index < 1"
 					height="600"
 					width="1200"
