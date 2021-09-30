@@ -4,17 +4,22 @@
 			<component :project="selectedProject" :is="modalComponent"></component>
 		</AppModal>
 		<h1 class="section-heading">My Portfolio</h1>
-		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2">
+		<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-2 mt-4">
 			<div v-for="(project, index) in projects" :key="index">
-				<div v-if="limit">
+				<div class="h-full" v-if="limit">
 					<AppProjectCard
+						class="h-full"
 						v-if="index < 3"
 						@showmodal="showModal(project)"
 						:project="project"
 					/>
 				</div>
-				<div v-else>
-					<AppProjectCard @showmodal="showModal(project)" :project="project" />
+				<div class="h-full" v-else>
+					<AppProjectCard
+						class="h-full"
+						@showmodal="showModal(project)"
+						:project="project"
+					/>
 				</div>
 			</div>
 		</div>

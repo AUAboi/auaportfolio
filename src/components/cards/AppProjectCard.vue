@@ -5,10 +5,10 @@
 		:index="index"
 		@hide="handleHide"
 	></vue-easy-lightbox>
-	<article class="sm:m-4 w-5/6 mx-auto">
+	<article class="w-5/6 mx-auto h-full">
 		<div
 			v-show="loaded"
-			class="border-2 border-gray-200 rounded-lg overflow-hidden"
+			class="border-2 border-gray-200 rounded-lg overflow-hidden h-full"
 		>
 			<div
 				v-for="(img, index) in projectImages"
