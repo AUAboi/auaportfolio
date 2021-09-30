@@ -113,10 +113,11 @@ export default {
 				skills: []
 			},
 			projects: [],
+			skills: [],
+
 			currentSkill: "",
 			toggleTypes: ["all", "frontend", "backend"],
-			currentToggleType: "all",
-			skills: []
+			currentToggleType: "all"
 		};
 	},
 	methods: {

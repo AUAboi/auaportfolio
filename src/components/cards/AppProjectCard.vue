@@ -91,11 +91,13 @@ export default {
 	},
 	methods: {
 		getImgUrl() {
-			let imgs = this.project.img;
-
+			let imgs = this.project.img || [];
+			let newArr = [];
 			imgs.forEach(img => {
-				this.projectImages.push(require(`../../assets/portfolio/${img}`));
+				newArr.push(require(`../../assets/portfolio/${img}`));
 			});
+
+			this.projectImages = newArr;
 		},
 
 		showImg(index) {
@@ -105,6 +107,14 @@ export default {
 
 		handleHide() {
 			this.visible = false;
+		}
+	},
+	watch: {
+		project: {
+			deep: true,
+			handler() {
+				this.getImgUrl();
+			}
 		}
 	},
 	created() {

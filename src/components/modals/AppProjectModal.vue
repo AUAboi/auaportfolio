@@ -14,7 +14,7 @@
 				@click="showImg(index)"
 			>
 				<img
-					v-if="index <1"
+					v-if="index < 1"
 					loading="lazy"
 					class="rounded-md"
 					:src="img"
@@ -91,9 +91,12 @@ export default {
 	methods: {
 		getImgUrl() {
 			let imgs = this.project.img || [];
+			let newArr = [];
 			imgs.forEach(img => {
-				this.projectImages.push(require(`../../assets/portfolio/${img}`));
+				newArr.push(require(`../../assets/portfolio/${img}`));
 			});
+
+			this.projectImages = newArr;
 		},
 
 		showImg(index) {
@@ -106,9 +109,15 @@ export default {
 		}
 	},
 	watch: {
-		project() {
-			this.getImgUrl();
+		project: {
+			deep: true,
+			handler() {
+				this.getImgUrl();
+			}
 		}
+	},
+	created() {
+		this.getImgUrl();
 	}
 };
 </script>
