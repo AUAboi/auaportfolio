@@ -1,7 +1,7 @@
 <template>
 	<ul class="grid grid-flow-col gap-4 text-3xl mt-2 p-1">
 		<li class="text-gray-800 hover:text-blue-700">
-			<a href="https://www.facebook.com/ahsan.faisal.925/"
+			<a href="https://www.facebook.com/ahsanAUA"
 				><i class="fab fa-facebook"></i
 			></a>
 		</li>
