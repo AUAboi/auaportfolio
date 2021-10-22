@@ -27,6 +27,7 @@
 <script>
 export default {
 	name: "AppSkill",
+	emits: ["skill-click"],
 	props: {
 		skill: {
 			required: true

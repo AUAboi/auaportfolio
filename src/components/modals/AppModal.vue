@@ -45,6 +45,7 @@
 <script>
 export default {
 	name: "AppModal",
+	emits: ["close"],
 	props: {
 		width: {
 			required: false

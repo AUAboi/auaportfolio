@@ -27,6 +27,8 @@ import AppProjectCard from "@/components/cards/AppProjectCard";
 
 export default {
 	name: "AppPortfolioModal.vue",
+	emits: ["render"],
+
 	components: {
 		AppProjectCard
 	},

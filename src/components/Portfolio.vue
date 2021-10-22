@@ -8,18 +8,13 @@
 			<div v-for="(project, index) in projects" :key="index">
 				<div class="h-full" v-if="limit">
 					<AppProjectCard
-						class="h-full"
 						v-if="index < 3"
 						@showmodal="showModal(project)"
 						:project="project"
 					/>
 				</div>
 				<div class="h-full" v-else>
-					<AppProjectCard
-						class="h-full"
-						@showmodal="showModal(project)"
-						:project="project"
-					/>
+					<AppProjectCard @showmodal="showModal(project)" :project="project" />
 				</div>
 			</div>
 		</div>

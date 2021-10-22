@@ -3,7 +3,7 @@
 	<main>
 		<Home class="md:mx-16" id="home" />
 		<About id="about" />
-		<MySkills @show-modal="true" id="skills" />
+		<MySkills id="skills" />
 		<Portfolio id="portfolio" />
 		<Contact id="contact" />
 
