@@ -52,7 +52,7 @@ body {
 }
 
 #app {
-	@apply mt-6 overflow-x-hidden;
+	@apply pt-6 overflow-x-hidden border-t-8 border-purple-400;
 	font-family: "Nunito Sans", sans-serif;
 }
 
