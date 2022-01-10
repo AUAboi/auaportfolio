@@ -47,6 +47,20 @@ export default {
 	@apply text-white bg-purple-400;
 }
 
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-button {
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-purple-300;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	@apply bg-purple-400;
+}
 body {
 	@apply overflow-x-hidden;
 }

@@ -60,17 +60,14 @@
 		<div class="text-green-500" v-if="submit">
 			<p>{{ submit }}!</p>
 		</div>
-		<button
-			type="submit"
-			class="text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg"
-		>
-			Send
-		</button>
+		<AppAnimatedBtn :loader="loader" />
 	</form>
 </template>
 
 <script>
 import axios from "axios";
+
+import AppAnimatedBtn from "@/components/animations/AppAnimatedBtn";
 
 export default {
 	name: "AppContactForm",
@@ -82,17 +79,31 @@ export default {
 				message: "",
 				bot: ""
 			},
-
+			loader: {
+				loading: false,
+				progress: 0
+			},
 			submit: "",
 			formError: ""
 		};
+	},
+	components: {
+		AppAnimatedBtn
 	},
 	methods: {
 		async sendContactFormData() {
 			if (!this.validateFormFields() || !this.emailValidation) {
 				return;
 			}
-			let response = await axios.post("api/send-mail", this.contactForm);
+			let response = await axios.post("api/send-mail", this.contactForm, {
+				onUploadProgress: progressEvent => {
+					console.log(progressEvent)
+					this.loader.loading = true;
+					this.loader.progress =
+						Math.round((progressEvent.loaded * 100) / progressEvent.total) /
+						100;
+				}
+			});
 			if (response.status === 200) {
 				this.submit = response.data.message;
 				this.formError = "";
@@ -143,6 +154,3 @@ export default {
 	}
 };
 </script>
-
-<style>
-</style>

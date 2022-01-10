@@ -38,7 +38,7 @@
 
 <script>
 import AppSocials from "@/components/utils/AppSocials";
-import AppNavMenuBtn from "@/components/utils/AppNavMenuBtn";
+import AppNavMenuBtn from "@/components/buttons/AppNavMenuBtn";
 
 export default {
 	name: "Navigation",
