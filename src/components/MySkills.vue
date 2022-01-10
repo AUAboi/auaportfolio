@@ -48,7 +48,7 @@
 					v-for="(type, index) in toggleTypes"
 					:key="index"
 					@click="navToggle(type)"
-					class="cursor-pointer capitalize rounded-full p-1 sm:p-2 transition-colors duration-250 ease-in-out"
+					class="cursor-pointer capitalize rounded-full p-1 sm:px-16 sm:py-4 transition-colors duration-250 ease-in-out"
 					:class="currentToggleType === type ? 'bg-purple-400 text-white' : ''"
 				>
 					{{ type }}
