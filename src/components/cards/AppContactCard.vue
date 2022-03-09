@@ -7,7 +7,7 @@
 				Located at:
 			</h2>
 			<p class="mt-1">
-				Faisalbad, Pakistan.
+				Faisalabad, Pakistan.
 			</p>
 			<h2
 				class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4"
