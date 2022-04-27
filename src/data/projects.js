@@ -1,5 +1,19 @@
 const projects = [
   {
+    name: "Fashion Studio",
+    intro:
+      "An e-commerce store built on woocommerce for a clothing retail store",
+    details:
+      "A freelance project I did for a local clothing store. Website was built on woocommerce wordpress as per client's request. It includes all the bells and whistles of a e-commerce store.",
+    skills: ["wordpress", "php"],
+    img: [
+      "fashionstudioimg.webp",
+      "fashionstudioimg2.webp",
+      "fashionstudioimg3.webp",
+    ],
+    link: "https://fashionstudiopk.com/",
+  },
+  {
     title: "Modern Cafe Website",
     intro: "A small cafe website I built for a client",
     details:
