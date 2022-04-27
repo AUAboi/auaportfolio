@@ -1,6 +1,6 @@
 const projects = [
   {
-    name: "Fashion Studio",
+    title: "Fashion Studio",
     intro:
       "An e-commerce store built on woocommerce for a clothing retail store",
     details:
