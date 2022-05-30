@@ -27,7 +27,10 @@
 				/>
 			</div>
 
-			<div class="pl-1 py-1 md:p-6">
+			<div
+				@click.prevent="$emit('showmodal', project)"
+				class="pl-1 py-1 md:p-6"
+			>
 				<span
 					v-for="(skill, index) in project.skills"
 					:key="index"
